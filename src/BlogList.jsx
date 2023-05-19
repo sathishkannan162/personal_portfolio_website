@@ -50,10 +50,11 @@ const dataList = [
   },
 ];
 
-const BlogCards = () => {
+const BlogCards = (props) => {
+  const {title, count} = props;
   return (
     <Container maxWidth="1200px" mx="auto" my="auto" p={{ base: 5, md: 10 }}>
-      <Heading py={'3'}>Projects</Heading>
+      <Heading py={'3'}>{title}</Heading>
       <SimpleGrid columns={[1, 2, 3]} spacing="15px">
         {dataList.map((blog) => {
           return (
