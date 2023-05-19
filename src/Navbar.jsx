@@ -42,10 +42,14 @@ const Navbar = () => {
             <Link to="/">
               <Avatar src={Logo} size="sm" />
             </Link>
-            <VisuallyHidden>Sathish Kannan</VisuallyHidden>
-            <chakra.h1 fontSize="xl" fontWeight="medium" ml="2">
-              Sathish Kannan
-            </chakra.h1>
+            <Link to="/">
+              <VisuallyHidden>Sathish Kannan</VisuallyHidden>
+            </Link>
+            <Link to="/">
+              <chakra.h1 fontSize="xl" fontWeight="medium" ml="2">
+                Sathish Kannan
+              </chakra.h1>
+            </Link>
           </Flex>
           <HStack display="flex" alignItems="center" spacing={1}>
             <HStack
@@ -57,6 +61,9 @@ const Navbar = () => {
                 md: 'inline-flex',
               }}
             >
+              <Button variant="ghost">
+                <Link to="/">Home</Link>
+              </Button>
               <Button variant="ghost">
                 <Link to="/projects">Projects</Link>
               </Button>
@@ -110,20 +117,17 @@ const Navbar = () => {
                 />
 
                 <Button w="full" variant="ghost">
-                  Projects
+                  <Link to="/">Home</Link>
                 </Button>
                 <Button w="full" variant="ghost">
-                  About Me
+                  <Link to="/projects">Projects</Link>
                 </Button>
                 <Button w="full" variant="ghost">
-                  Contact
+                  <Link to="/about">About Me</Link>
                 </Button>
-                {/* <Button w="full" variant="ghost"> */}
-                {/* Company */}
-                {/* </Button> */}
-                {/* <Button w="full" variant="ghost"> */}
-                {/* Sign in */}
-                {/* </Button> */}
+                <Button w="full" variant="ghost">
+                  <Link to="/contact">Contact</Link>
+                </Button>
               </VStack>
             </Box>
           </HStack>
