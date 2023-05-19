@@ -5,18 +5,13 @@ import {
   Box,
   Heading,
   Text,
-  Button,
   Image,
-  Icon,
-  IconButton,
-  createIcon,
-  useColorModeValue,
 } from '@chakra-ui/react';
 import HeroImage from './assets/programmer_under_tree.jpeg';
 
 export default function CallToActionWithVideo() {
   return (
-    <Container maxW={'7xl'}>
+    <Container maxW={'1200px'}>
       <Stack
         align={'center'}
         spacing={{ base: 8, md: 10 }}
@@ -50,15 +45,13 @@ export default function CallToActionWithVideo() {
               The Power of Pixels
             </Text>
           </Heading>
-          <Box>
-            <Heading as="h4" size={'md'}>
-              <Text color={'gray.600'}>
-                I am Sathish, a web developer. On this site, you can explore my
-                web wonders.I build full stack web applications with React
-                frameworks, Nodejs and express.
-              </Text>
-            </Heading>
-          </Box>
+          <Heading as="h4" size={'md'}>
+            <Text color={'gray.600'} textAlign="justify" paddingEnd={110}>
+              I am Sathish, a web developer. On this site, you can explore my
+              web wonders.I build full stack web applications with React
+              frameworks, Nodejs and express.
+            </Text>
+          </Heading>
         </Stack>
         <Flex
           flex={1}
@@ -69,11 +62,9 @@ export default function CallToActionWithVideo() {
         >
           <Box
             position={'relative'}
-            height={'600px'}
-            rounded={'2xl'}
-            boxShadow={'2xl'}
-            width={'full'}
-            overflow={'hidden'}
+            maxHeight={'600px'}
+          maxWidth={"600px"}
+            overflow={"clip"}
           >
             <Image
               alt={'Hero Image'}

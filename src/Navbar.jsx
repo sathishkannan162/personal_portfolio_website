@@ -31,7 +31,7 @@ const Navbar = () => {
         py={4}
         shadow="md"
       >
-        <Flex alignItems="center" justifyContent="space-between" mx="auto">
+        <Flex maxW="1200px" alignItems="center" justifyContent="space-between" mx="auto">
           <Flex>
             <chakra.a
               href="/"
