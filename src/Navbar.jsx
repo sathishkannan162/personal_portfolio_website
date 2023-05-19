@@ -39,15 +39,10 @@ const Navbar = () => {
           mx="auto"
         >
           <Flex>
-            <chakra.a
-              href="/"
-              title="Sathish Kannan Home Page"
-              display="flex"
-              alignItems="center"
-            >
-              <Avatar src={Logo} name="Sathish Kannan" size="sm" />
-              <VisuallyHidden>Choc</VisuallyHidden>
-            </chakra.a>
+            <Link to="/">
+              <Avatar src={Logo} size="sm" />
+            </Link>
+            <VisuallyHidden>Sathish Kannan</VisuallyHidden>
             <chakra.h1 fontSize="xl" fontWeight="medium" ml="2">
               Sathish Kannan
             </chakra.h1>
@@ -72,9 +67,6 @@ const Navbar = () => {
                 <Link to="/about">About Me</Link>
               </Button>
             </HStack>
-            {/* <Button colorScheme="brand" size="sm"> */}
-            {/* Get Started */}
-            {/* </Button> */}
             <Box
               display={{
                 base: 'inline-flex',
