@@ -15,6 +15,7 @@ import {
 } from '@chakra-ui/react';
 import { AiOutlineMenu } from 'react-icons/ai';
 import Logo from './assets/website_logo.png';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const bg = useColorModeValue('white', 'gray.800');
@@ -31,7 +32,12 @@ const Navbar = () => {
         py={4}
         shadow="md"
       >
-        <Flex maxW="1200px" alignItems="center" justifyContent="space-between" mx="auto">
+        <Flex
+          maxW="1200px"
+          alignItems="center"
+          justifyContent="space-between"
+          mx="auto"
+        >
           <Flex>
             <chakra.a
               href="/"
@@ -56,11 +62,15 @@ const Navbar = () => {
                 md: 'inline-flex',
               }}
             >
-              <Button variant="ghost">Projects</Button>
-              <Button variant="ghost">Contact</Button>
-              <Button variant="ghost">About Me</Button>
-              {/* <Button variant="ghost">Company</Button> */}
-              {/* <Button variant="ghost">Sign in</Button> */}
+              <Button variant="ghost">
+                <Link to="/projects">Projects</Link>
+              </Button>
+              <Button variant="ghost">
+                <Link to="/contact">Contact</Link>
+              </Button>
+              <Button variant="ghost">
+                <Link to="/about">About Me</Link>
+              </Button>
             </HStack>
             {/* <Button colorScheme="brand" size="sm"> */}
             {/* Get Started */}
