@@ -12,12 +12,12 @@ export default function ContactPage() {
       <br />
       <Text color={'teal.600'}>
         <Link href="mailto:sathishkannan162@gmail.com">
-          sathishkannan162@gmail.com
+          📧sathishkannan162@gmail.com
         </Link>
       </Text>
       <Text color={'teal.600'}>
         <Link href="mailto:sathishkannan6000@gmail.com">
-          sathishkannan6000@gmail.com
+          📧sathishkannan6000@gmail.com
         </Link>
       </Text>
       <br />

@@ -62,16 +62,16 @@ const Navbar = () => {
               }}
             >
               <Button variant="ghost">
-                <Link to="/">Home</Link>
+                <Link to="/">🏠Home</Link>
               </Button>
               <Button variant="ghost">
-                <Link to="/projects">Projects</Link>
+                <Link to="/projects">🏅Projects</Link>
               </Button>
               <Button variant="ghost">
-                <Link to="/contact">Contact</Link>
+                <Link to="/contact">📞Contact</Link>
               </Button>
               <Button variant="ghost">
-                <Link to="/about">About Me</Link>
+                <Link to="/about">✨About Me</Link>
               </Button>
             </HStack>
             <Box

@@ -7,7 +7,9 @@ import {
   Text,
   Image,
 } from '@chakra-ui/react';
-import HeroImage from './assets/programmer_under_tree.jpeg';
+// import HeroImage from './assets/programmer_under_tree.jpeg';
+import HeroImage from './assets/my_photo.jpg'
+
 
 export default function CallToActionWithVideo() {
   return (
@@ -18,41 +20,6 @@ export default function CallToActionWithVideo() {
         py={{ base: 2, md: 4 }}
         direction={{ base: 'column', md: 'row' }}
       >
-        <Stack flex={1} spacing={{ base: 5, md: 10 }}>
-          <Heading
-            lineHeight={1.1}
-            fontWeight={600}
-            fontSize={{ base: '3xl', sm: '4xl', lg: '6xl' }}
-          >
-            <Text
-              as={'span'}
-              position={'relative'}
-              _after={{
-                content: "''",
-                width: 'full',
-                height: '30%',
-                position: 'absolute',
-                bottom: 1,
-                left: 0,
-                bg: 'red.400',
-                zIndex: -1,
-              }}
-            >
-              Unleash
-            </Text>
-            <br />
-            <Text as={'span'} color={'red.400'}>
-              The Power of Pixels
-            </Text>
-          </Heading>
-          <Heading as="h4" size={'md'}>
-            <Text color={'gray.600'} textAlign="justify" paddingEnd={110}>
-              I am Sathish, a web developer. On this site, you can explore my
-              web wonders.I build full stack web applications with React
-              frameworks, Nodejs and express.
-            </Text>
-          </Heading>
-        </Stack>
         <Flex
           flex={1}
           justify={'center'}
@@ -62,9 +29,9 @@ export default function CallToActionWithVideo() {
         >
           <Box
             position={'relative'}
-            maxHeight={'600px'}
-          maxWidth={"600px"}
-            overflow={"clip"}
+            maxHeight={'500px'}
+            width={'500px'}
+            overflow={'clip'}
           >
             <Image
               alt={'Hero Image'}
@@ -73,9 +40,71 @@ export default function CallToActionWithVideo() {
               w={'100%'}
               h={'100%'}
               src={HeroImage}
+              borderRadius={10}
             />
           </Box>
         </Flex>
+        <Stack flex={1} spacing={{ base: 5, md: 10 }}>
+          <Heading
+            lineHeight={0.0}
+            fontWeight={600}
+            fontSize={{ base: '3xl', sm: '4xl', lg: '6xl' }}
+          >
+            {/* <Text */}
+            {/* as={'span'} */}
+            {/* position={'relative'} */}
+            {/* _after={{ */}
+            {/* content: "''", */}
+            {/* width: 'full', */}
+            {/* height: '30%', */}
+            {/* position: 'absolute', */}
+            {/* bottom: 1, */}
+            {/* left: 0, */}
+            {/* bg: 'red.400', */}
+            {/* zIndex: -1, */}
+            {/* }} */}
+            {/* > */}
+            {/* Unleash */}
+            {/* </Text> */}
+            <Text
+              as={'span'}
+              position={'relative'}
+              _after={{
+                content: "''",
+                width: 'full',
+                height: '10%',
+                postion: 'absolute',
+                bottom: 1,
+                left: 0,
+                zIndex: -1,
+                bg: 'red.400',
+              }}
+            >
+              Hey!👋
+            </Text>
+          </Heading>
+          <Heading
+            fontWeight={600}
+            fontSize={{ base: '2xl', sm: '3xl', lg: '5xl' }}
+          >
+            <Text as={'span'} color={'grey.400'}>
+              I am Sathish
+            </Text>
+          </Heading>
+          <Heading as="h4" size={'md'}>
+            <Text color={'gray.500'} textAlign="justify" paddingEnd={110}>
+              I am a web developer🧑‍💻 from India. I recently graduated with Masters from{' '}
+              <Text as={'span'} color={'blackAlpha.800'}>
+                IIT Bombay🎓
+              </Text>
+              . On this site, you can explore my web wonders🚀. I build full
+              stack web applications with{' '}
+              <Text as={'span'} color={'blackAlpha.800'}>
+                React frameworks, Nodejs and Express.
+              </Text>
+            </Text>
+          </Heading>
+        </Stack>
       </Stack>
     </Container>
   );
