@@ -4,12 +4,10 @@ import {
   SimpleGrid,
   Container,
   Image,
-  Link,
   Text,
-  Button,
   Heading,
 } from '@chakra-ui/react';
-import { FaExternalLinkAlt } from 'react-icons/fa';
+import projects from './projectInfoArray.js';
 
 const dataList = [
   {
@@ -51,14 +49,14 @@ const dataList = [
 ];
 
 const BlogCards = (props) => {
-  const { title, count } = props;
+  const { title, count, skip } = props;
   return (
     <Container maxWidth="1200px" mx="auto" my="auto" p={{ base: 5, md: 10 }}>
       <Heading py={'3'}>{title}</Heading>
       <SimpleGrid columns={[1, 2, 3]} spacing="15px">
-        {dataList.map((blog) => {
+        {projects.slice(skip, count + skip).map((blog) => {
           return (
-            <Box position="relative" key={blog.id}>
+            <Box position="relative" key={blog.projectID}>
               <Box
                 fontSize="sm"
                 position="absolute"
@@ -66,7 +64,7 @@ const BlogCards = (props) => {
                 margin="5px"
                 zIndex="1"
               ></Box>
-              <Link to="#">
+              <a href={blog.link} target="_blank">
                 <Box
                   borderWidth="1px"
                   shadow="md"
@@ -74,10 +72,16 @@ const BlogCards = (props) => {
                   overflow="hidden"
                   position="relative"
                 >
-                  <Image
-                    src="https://www.researchgate.net/publication/357031807/figure/fig1/AS:1100985686589442@1639506851670/A-choropleth-map-of-the-United-States-showing-the-geographic-distribution-of-our.png"
-                    alt="Blog image"
-                  />
+                  <Box maxH="160px" overflow="hidden">
+                    <Image
+                      src={blog.thumbnail}
+                      overflow="clip"
+                      mx="auto"
+                      // maxH="100px"
+                      alt="Blog image"
+                      lazyload="true"
+                    />
+                  </Box>
                   <Box p={{ base: 4, lg: 6 }}>
                     <Box d="flex" alignItems="baseline">
                       <Box
@@ -85,7 +89,6 @@ const BlogCards = (props) => {
                         as="h2"
                         letterSpacing="wide"
                         textTransform="uppercase"
-                        ml="2"
                       >
                         {blog.title}
                       </Box>
@@ -111,7 +114,7 @@ const BlogCards = (props) => {
                     {/* </Button> */}
                   </Box>
                 </Box>
-              </Link>
+              </a>
             </Box>
           );
         })}

@@ -1,9 +1,9 @@
 import React from 'react';
-import { Box, Flex, chakra, Button } from '@chakra-ui/react';
+import { Box, Flex, chakra, Button, Image } from '@chakra-ui/react';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 
 const ProjectHeroCard = (props) => {
-  const { url, title, children } = props;
+  const { url, title, children, link } = props;
   return (
     <Flex
       bg="#edf3f8"
@@ -27,10 +27,26 @@ const ProjectHeroCard = (props) => {
             h={{ base: 64, lg: 'full' }}
             rounded={{ lg: 'lg' }}
             bgSize="cover"
+            display={'flex'}
+            alignItems={'center'}
+            justifyContent={'center'}
             style={{
               backgroundImage: `url(${url})`,
+              backgroundSize: 'cover',
+              // backgroundRepeat: 'no-repeat',
             }}
-          ></Box>
+          >
+            {/* <Box */}
+            {/* bgSize="cover" */}
+            {/* h={{ base: 64, lg: 'full' }} */}
+            {/* style={{ */}
+            {/* backgroundImage: `url(${url})`, */}
+            {/* backgroundSize: 'cover', */}
+            {/* backgroundRepeat: 'no-repeat', */}
+            {/* }} */}
+            {/* ></Box> */}
+            {/* <Image src={url} width="100%" height="100%" objectFit={'fill'} /> */}
+          </Box>
         </Box>
 
         <Box py={12} px={6} maxW={{ base: 'xl', lg: '5xl' }} w={{ lg: '50%' }}>
@@ -45,7 +61,15 @@ const ProjectHeroCard = (props) => {
           <chakra.p mt={4} color="gray.600" _dark={{ color: 'gray.400' }}>
             {children}
           </chakra.p>
-          <Button my="8px" colorScheme={'blue'} rightIcon={<FaExternalLinkAlt />}>View</Button>
+          <Button
+            my="8px"
+            colorScheme={'blue'}
+            rightIcon={<FaExternalLinkAlt />}
+          >
+            <a href={link} target="_blank">
+              View
+            </a>
+          </Button>
         </Box>
       </Box>
     </Flex>

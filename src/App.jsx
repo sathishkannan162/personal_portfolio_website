@@ -5,7 +5,7 @@ function App() {
   return (
     <div>
       <CallToActionWithVideo />
-      <BlogCards title={'Projects'} count={6} />
+      <BlogCards title={'Projects'} count={6} skip={0} />
     </div>
   );
 }
