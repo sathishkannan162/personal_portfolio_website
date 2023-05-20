@@ -51,7 +51,7 @@ const dataList = [
 ];
 
 const BlogCards = (props) => {
-  const {title, count} = props;
+  const { title, count } = props;
   return (
     <Container maxWidth="1200px" mx="auto" my="auto" p={{ base: 5, md: 10 }}>
       <Heading py={'3'}>{title}</Heading>
@@ -103,12 +103,12 @@ const BlogCards = (props) => {
                     >
                       {blog.content}
                     </Text>
-                    <Button
-                      colorScheme={'blue'}
-                      rightIcon={<FaExternalLinkAlt />}
-                    >
-                      View
-                    </Button>
+                    {/* <Button */}
+                    {/* colorScheme={'blue'} */}
+                    {/* rightIcon={<FaExternalLinkAlt />} */}
+                    {/* > */}
+                    {/* View */}
+                    {/* </Button> */}
                   </Box>
                 </Box>
               </Link>
@@ -120,16 +120,4 @@ const BlogCards = (props) => {
   );
 };
 
-const CustomButton = ({ children, ...props }) => {
-  return (
-    <Button
-      textTransform="uppercase"
-      lineHeight="inherit"
-      rounded="md"
-      {...props}
-    >
-      {children}
-    </Button>
-  );
-};
 export default BlogCards;
