@@ -40,6 +40,7 @@ export default function SmallWithSocial() {
       color={useColorModeValue('gray.700', 'gray.200')}
     >
       <Container
+      height={'100px'}
         as={Stack}
         maxW={'6xl'}
         py={4}
