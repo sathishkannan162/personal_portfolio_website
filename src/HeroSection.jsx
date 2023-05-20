@@ -43,9 +43,13 @@ export default function CallToActionWithVideo() {
             />
           </Box>
         </Flex>
-        <Stack flex={1} spacing={{ base: 5, md: 10 }}>
+        <Stack
+          flex={1}
+          spacing={{ base: 5, md: 10 }}
+          mx="auto"
+          p={{ base: 5, md: 10 }}
+        >
           <Heading
-            lineHeight={0.0}
             fontWeight={600}
             fontSize={{ base: '3xl', sm: '4xl', lg: '6xl' }}
           >
@@ -90,20 +94,26 @@ export default function CallToActionWithVideo() {
               I am Sathish
             </Text>
           </Heading>
-          <Heading as="h4" size={'md'}>
-            <Text color={'gray.500'} textAlign="justify" paddingEnd={110}>
-              I am a web developer🧑‍💻 from India. I recently graduated with
-              Masters from{' '}
-              <Text as={'span'} color={'blackAlpha.800'}>
-                IIT Bombay🎓
+          <Box maxW={{ base: '100%', md: '70%' }}>
+            <Heading as="h4" size={'md'}>
+              <Text
+                color={'gray.500'}
+                textAlign="justify"
+                // paddingEnd={{ base: 10, md: 110 }}
+              >
+                I am a web developer🧑‍💻 from India. I recently graduated with
+                Masters from{' '}
+                <Text as={'span'} color={'blackAlpha.800'}>
+                  IIT Bombay🎓
+                </Text>
+                . On this site, you can explore my web wonders🚀. I build full
+                stack web applications with{' '}
+                <Text as={'span'} color={'blackAlpha.800'}>
+                  React frameworks, Nodejs and Express.
+                </Text>
               </Text>
-              . On this site, you can explore my web wonders🚀. I build full
-              stack web applications with{' '}
-              <Text as={'span'} color={'blackAlpha.800'}>
-                React frameworks, Nodejs and Express.
-              </Text>
-            </Text>
-          </Heading>
+            </Heading>
+          </Box>
         </Stack>
       </Stack>
     </Container>
