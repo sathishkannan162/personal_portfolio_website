@@ -21,11 +21,12 @@ const ProjectHeroCard = (props) => {
         maxW={{ lg: '5xl' }}
         shadow={{ lg: 'lg' }}
         rounded={{ lg: 'lg' }}
+        // rounded={'lg'}
       >
         <Box w={{ lg: '50%' }}>
           <Box
             h={{ base: 64, lg: 'full' }}
-            rounded={{ lg: 'lg' }}
+            rounded={{ base: 'lg', lg: 'lg' }}
             bgSize="cover"
             display={'flex'}
             alignItems={'center'}
@@ -33,7 +34,6 @@ const ProjectHeroCard = (props) => {
             style={{
               backgroundImage: `url(${url})`,
               backgroundSize: 'cover',
-              // backgroundRepeat: 'no-repeat',
             }}
           >
             {/* <Box */}

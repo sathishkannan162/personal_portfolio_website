@@ -8,8 +8,7 @@ import {
   Image,
 } from '@chakra-ui/react';
 // import HeroImage from './assets/programmer_under_tree.jpeg';
-import HeroImage from './assets/my_photo.jpg'
-
+import HeroImage from './assets/my_photo.jpg';
 
 export default function CallToActionWithVideo() {
   return (
@@ -93,7 +92,8 @@ export default function CallToActionWithVideo() {
           </Heading>
           <Heading as="h4" size={'md'}>
             <Text color={'gray.500'} textAlign="justify" paddingEnd={110}>
-              I am a web developer🧑‍💻 from India. I recently graduated with Masters from{' '}
+              I am a web developer🧑‍💻 from India. I recently graduated with
+              Masters from{' '}
               <Text as={'span'} color={'blackAlpha.800'}>
                 IIT Bombay🎓
               </Text>
