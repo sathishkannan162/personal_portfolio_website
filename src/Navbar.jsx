@@ -68,10 +68,10 @@ const Navbar = () => {
                 <Link to="/projects">🏅Projects</Link>
               </Button>
               <Button variant="ghost">
-                <Link to="/contact">📞Contact</Link>
+                <Link to="/about">✨About Me</Link>
               </Button>
               <Button variant="ghost">
-                <Link to="/about">✨About Me</Link>
+                <Link to="/contact">📞Contact</Link>
               </Button>
             </HStack>
             <Box
@@ -110,6 +110,7 @@ const Navbar = () => {
                 spacing={3}
                 rounded="sm"
                 shadow="sm"
+                zIndex={2}
               >
                 <CloseButton
                   aria-label="Close menu"
@@ -117,16 +118,16 @@ const Navbar = () => {
                 />
 
                 <Button w="full" variant="ghost">
-                  <Link to="/">Home</Link>
+                  <Link to="/">🏠Home</Link>
                 </Button>
                 <Button w="full" variant="ghost">
-                  <Link to="/projects">Projects</Link>
+                  <Link to="/projects">🏅Projects</Link>
                 </Button>
                 <Button w="full" variant="ghost">
-                  <Link to="/about">About Me</Link>
+                  <Link to="/about">✨About Me</Link>
                 </Button>
                 <Button w="full" variant="ghost">
-                  <Link to="/contact">Contact</Link>
+                  <Link to="/contact">📞Contact</Link>
                 </Button>
               </VStack>
             </Box>
