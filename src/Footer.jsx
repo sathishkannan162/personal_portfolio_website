@@ -4,10 +4,17 @@ import {
   Container,
   Stack,
   Text,
+  Link,
   useColorModeValue,
   VisuallyHidden,
 } from '@chakra-ui/react';
-import { FaInstagram, FaTwitter, FaLinkedin, FaFacebook } from 'react-icons/fa';
+import {
+  FaInstagram,
+  FaTwitter,
+  FaLinkedin,
+  FaFacebook,
+  FaGithub,
+} from 'react-icons/fa';
 
 const SocialButton = ({ children, label, href }) => {
   return (
@@ -50,6 +57,9 @@ export default function SmallWithSocial() {
         align={{ base: 'center', md: 'center' }}
       >
         <Text>© 2023 Sathish Kannan. All rights reserved</Text>
+        <Link to="https://github.com/sathishkannan162/personal_portfolio_website">
+          Source Code on github
+        </Link>
         <Stack direction={'row'} spacing={6}>
           <SocialButton
             label={'Twitter'}
@@ -70,10 +80,16 @@ export default function SmallWithSocial() {
             <FaLinkedin />
           </SocialButton>
           <SocialButton
-            label={'Faceboo'}
+            label={'Facebook'}
             href={'https://www.facebook.com/sathishkannan.m.3'}
           >
             <FaFacebook />
+          </SocialButton>
+          <SocialButton
+            label={'Github'}
+            href={'https://github.com/sathishkannan162/'}
+          >
+            <FaGithub />
           </SocialButton>
         </Stack>
       </Container>
