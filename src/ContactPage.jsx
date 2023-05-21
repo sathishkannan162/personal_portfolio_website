@@ -1,5 +1,6 @@
 import { Heading, Text, Link } from '@chakra-ui/react';
 import PageContainer from './PageContainer';
+import StandardLink from './StandardLink';
 
 export default function ContactPage() {
   return (
@@ -11,14 +12,16 @@ export default function ContactPage() {
       </Heading>
       <br />
       <Text color={'teal.600'}>
-        <Link href="mailto:sathishkannan162@gmail.com">
-          📧sathishkannan162@gmail.com
-        </Link>
+        📧
+        <StandardLink href="mailto:sathishkannan162@gmail.com">
+          sathishkannan162@gmail.com
+        </StandardLink>
       </Text>
       <Text color={'teal.600'}>
-        <Link href="mailto:sathishkannan6000@gmail.com">
-          📧sathishkannan6000@gmail.com
-        </Link>
+        📧
+        <StandardLink href="mailto:sathishkannan6000@gmail.com">
+          sathishkannan6000@gmail.com
+        </StandardLink>
       </Text>
       <br />
       <Text>
