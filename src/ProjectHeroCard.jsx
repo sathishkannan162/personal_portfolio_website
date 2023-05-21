@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Flex, chakra, Button, Image } from '@chakra-ui/react';
+import { Box, Flex, chakra, Button } from '@chakra-ui/react';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 
 const ProjectHeroCard = (props) => {
