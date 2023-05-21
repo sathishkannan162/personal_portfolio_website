@@ -17,6 +17,8 @@ const ProjectHeroCard = (props) => {
         bg="white"
         _dark={{ bg: 'gray.800' }}
         mx={{ lg: 8 }}
+        py={10}
+        px={2}
         display={{ lg: 'flex' }}
         maxW={{ lg: '5xl' }}
         shadow={{ lg: 'lg' }}
