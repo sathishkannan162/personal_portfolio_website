@@ -7,7 +7,7 @@ import {
   useColorModeValue,
   VisuallyHidden,
 } from '@chakra-ui/react';
-import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
+import { FaInstagram, FaTwitter, FaLinkedin, FaFacebook } from 'react-icons/fa';
 
 const SocialButton = ({ children, label, href }) => {
   return (
@@ -40,7 +40,7 @@ export default function SmallWithSocial() {
       color={useColorModeValue('gray.700', 'gray.200')}
     >
       <Container
-      height={'100px'}
+        height={'100px'}
         as={Stack}
         maxW={'6xl'}
         py={4}
@@ -51,14 +51,29 @@ export default function SmallWithSocial() {
       >
         <Text>© 2023 Sathish Kannan. All rights reserved</Text>
         <Stack direction={'row'} spacing={6}>
-          <SocialButton label={'Twitter'} href={'#'}>
+          <SocialButton
+            label={'Twitter'}
+            href={'https://twitter.com/Sathish06030039'}
+          >
             <FaTwitter />
           </SocialButton>
-          <SocialButton label={'YouTube'} href={'#'}>
-            <FaYoutube />
-          </SocialButton>
-          <SocialButton label={'Instagram'} href={'#'}>
+          <SocialButton
+            label={'Instagram'}
+            href={'https://www.facebook.com/sathishkannan.m.3'}
+          >
             <FaInstagram />
+          </SocialButton>
+          <SocialButton
+            label={'LinkedIn'}
+            href={'https://www.linkedin.com/in/sathish-kannan-a48a39166/'}
+          >
+            <FaLinkedin />
+          </SocialButton>
+          <SocialButton
+            label={'Faceboo'}
+            href={'https://www.facebook.com/sathishkannan.m.3'}
+          >
+            <FaFacebook />
           </SocialButton>
         </Stack>
       </Container>
