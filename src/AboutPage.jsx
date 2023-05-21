@@ -1,6 +1,7 @@
 import { Heading, Text, Image, Box, Link } from '@chakra-ui/react';
 import PageContainer from './PageContainer';
 import myPhoto from './assets/my_photo.jpg';
+import StandardLink from './StandardLink';
 
 export default function AboutPage() {
   return (
@@ -20,19 +21,30 @@ export default function AboutPage() {
           <br />
           <br />
           Checkout my personal blog:{' '}
-          <Link href="https://sathishkannan162.github.io" color={'teal'}>
+          <StandardLink href="https://sathishkannan162.github.io">
+            {' '}
             https://sathishkannan162.github.io
-          </Link>
+          </StandardLink>
         </Text>
         <br />
         <Text>
-          Checkout my
-          <ul>
-            <li>Twitter</li>
-            <li>LinkedIn</li>
-            <li>Instagram</li>
-            <li>Facebook</li>
-          </ul>
+          Checkout my{' '}
+          <StandardLink href="https://www.linkedin.com/in/sathish-kannan-a48a39166/">
+            LinkedIn
+          </StandardLink>
+          ,{' '}
+          <StandardLink href="https://twitter.com/Sathish06030039">
+            Twitter
+          </StandardLink>
+          ,{' '}
+          <StandardLink href="https://www.instagram.com/satishkannan162/">
+            Instagram
+          </StandardLink>
+          {' '}and{' '}
+          <StandardLink href="https://www.facebook.com/sathishkannan.m.3">
+            Facebook
+          </StandardLink>
+          .
         </Text>
       </Text>
     </PageContainer>
