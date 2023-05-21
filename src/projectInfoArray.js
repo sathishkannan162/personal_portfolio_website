@@ -282,7 +282,7 @@ const projects = [
     projectID: 32,
     project: 'Portfolio Design',
     title: 'Portfolio Website',
-    link: '',
+    link: 'https://sathishkannanportfolio.netlify.app/',
     thumbnail: 'https://projectimages.netlify.app/project_32.png',
     content:
       'This is the code for my portfolio website. I used React and Chakra UI to construct the website.',
