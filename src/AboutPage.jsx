@@ -1,4 +1,4 @@
-import { Heading, Text, Image, Box, Link } from '@chakra-ui/react';
+import { Heading, Text, Image, Box } from '@chakra-ui/react';
 import PageContainer from './PageContainer';
 import myPhoto from './assets/my_photo_about.jpg';
 import StandardLink from './StandardLink';
