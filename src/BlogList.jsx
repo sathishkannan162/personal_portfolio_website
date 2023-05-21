@@ -8,7 +8,6 @@ import {
   Heading,
 } from '@chakra-ui/react';
 import projects from './projectInfoArray.js';
-let reverseProjects = projects.reverse();
 
 const BlogCards = (props) => {
   const { title, count, skip } = props;
@@ -16,7 +15,7 @@ const BlogCards = (props) => {
     <Container maxWidth="1200px" mx="auto" my="auto" p={{ base: 5, md: 10 }}>
       <Heading py={'3'}>{title}</Heading>
       <SimpleGrid columns={[1, 2, 3]} spacing="15px">
-        {reverseProjects.slice(skip, count + skip).map((blog) => {
+        {projects.slice(skip, count + skip).map((blog) => {
           return (
             <Box position="relative" key={blog.projectID}>
               <Box
