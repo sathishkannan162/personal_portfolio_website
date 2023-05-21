@@ -57,7 +57,10 @@ export default function SmallWithSocial() {
         align={{ base: 'center', md: 'center' }}
       >
         <Text>© 2023 Sathish Kannan. All rights reserved</Text>
-        <Link to="https://github.com/sathishkannan162/personal_portfolio_website">
+        <Link
+          href="https://github.com/sathishkannan162/personal_portfolio_website"
+          target="_blank"
+        >
           Source Code on github
         </Link>
         <Stack direction={'row'} spacing={6}>
