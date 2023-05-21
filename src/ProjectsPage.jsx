@@ -3,7 +3,7 @@ import BlogCards from './BlogList';
 import ProjectHeroCard from './ProjectHeroCard';
 import projects from './projectInfoArray.js';
 
-let featured_projectID = 0; // last project is featured
+let featured_projectID = 1; // last project is featured
 let featuredProject = projects[featured_projectID];
 
 export default function ProjectsPage() {
