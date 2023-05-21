@@ -21,7 +21,6 @@ const ProjectHeroCard = (props) => {
         maxW={{ lg: '5xl' }}
         shadow={{ lg: 'lg' }}
         rounded={{ lg: 'lg' }}
-        // rounded={'lg'}
       >
         <Box w={{ lg: '50%' }}>
           <Box
@@ -35,18 +34,7 @@ const ProjectHeroCard = (props) => {
               backgroundImage: `url(${url})`,
               backgroundSize: 'cover',
             }}
-          >
-            {/* <Box */}
-            {/* bgSize="cover" */}
-            {/* h={{ base: 64, lg: 'full' }} */}
-            {/* style={{ */}
-            {/* backgroundImage: `url(${url})`, */}
-            {/* backgroundSize: 'cover', */}
-            {/* backgroundRepeat: 'no-repeat', */}
-            {/* }} */}
-            {/* ></Box> */}
-            {/* <Image src={url} width="100%" height="100%" objectFit={'fill'} /> */}
-          </Box>
+          ></Box>
         </Box>
 
         <Box py={12} px={6} maxW={{ base: 'xl', lg: '5xl' }} w={{ lg: '50%' }}>

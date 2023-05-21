@@ -1,6 +1,6 @@
 import CallToActionWithVideo from './HeroSection';
 import BlogCards from './BlogList';
-import { Button, Flex, Box } from '@chakra-ui/react';
+import { Button, Box } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 import { FaArrowRight } from 'react-icons/fa';
 

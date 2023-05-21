@@ -38,7 +38,6 @@ const BlogCards = (props) => {
                       src={blog.thumbnail}
                       overflow="clip"
                       mx="auto"
-                      // maxH="100px"
                       alt="Blog image"
                       lazyload="true"
                     />
@@ -67,12 +66,6 @@ const BlogCards = (props) => {
                     >
                       {blog.content}
                     </Text>
-                    {/* <Button */}
-                    {/* colorScheme={'blue'} */}
-                    {/* rightIcon={<FaExternalLinkAlt />} */}
-                    {/* > */}
-                    {/* View */}
-                    {/* </Button> */}
                   </Box>
                 </Box>
               </a>

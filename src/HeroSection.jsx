@@ -7,7 +7,6 @@ import {
   Text,
   Image,
 } from '@chakra-ui/react';
-// import HeroImage from './assets/programmer_under_tree.jpeg';
 import HeroImage from './assets/my_photo.jpg';
 
 export default function CallToActionWithVideo() {
@@ -53,22 +52,6 @@ export default function CallToActionWithVideo() {
             fontWeight={600}
             fontSize={{ base: '3xl', sm: '4xl', lg: '6xl' }}
           >
-            {/* <Text */}
-            {/* as={'span'} */}
-            {/* position={'relative'} */}
-            {/* _after={{ */}
-            {/* content: "''", */}
-            {/* width: 'full', */}
-            {/* height: '30%', */}
-            {/* position: 'absolute', */}
-            {/* bottom: 1, */}
-            {/* left: 0, */}
-            {/* bg: 'red.400', */}
-            {/* zIndex: -1, */}
-            {/* }} */}
-            {/* > */}
-            {/* Unleash */}
-            {/* </Text> */}
             <Text
               as={'span'}
               position={'relative'}
