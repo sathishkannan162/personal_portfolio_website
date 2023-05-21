@@ -8,44 +8,46 @@ export default function AboutPage() {
     <PageContainer>
       <Heading>About Me</Heading>
       <br />
-      <Box maxW="400px" maxH="400px" float="left" pr={50}>
-        <Image src={myPhoto} borderRadius={9} lazyload={true} />
+      <Box
+        maxW="400px"
+        maxH="400px"
+        float={{ base: 'none', md: 'left' }}
+        pr={50}
+      >
+        <Image src={myPhoto} borderRadius={9} />
       </Box>
       <Text fontSize={'lg'}>
-        <Text>
-          I am Sathish Kannan. I recently graduated from 🎓IIT Bombay. I am a
-          self taught🤸 full stack developer.
-          <br />
-          <br />
-          Currently, I am building products that integrates with 🤖AI.
-          <br />
-          <br />
-          Checkout my personal blog:{' '}
-          <StandardLink href="https://sathishkannan162.github.io">
-            {' '}
-            https://sathishkannan162.github.io
-          </StandardLink>
-        </Text>
+        I am Sathish Kannan. I recently graduated from 🎓IIT Bombay. I am a self
+        taught🤸 full stack developer.
         <br />
-        <Text>
-          Checkout my{' '}
-          <StandardLink href="https://www.linkedin.com/in/sathish-kannan-a48a39166/">
-            LinkedIn
-          </StandardLink>
-          ,{' '}
-          <StandardLink href="https://twitter.com/Sathish06030039">
-            Twitter
-          </StandardLink>
-          ,{' '}
-          <StandardLink href="https://www.instagram.com/satishkannan162/">
-            Instagram
-          </StandardLink>{' '}
-          and{' '}
-          <StandardLink href="https://www.facebook.com/sathishkannan.m.3">
-            Facebook
-          </StandardLink>
-          .
-        </Text>
+        <br />
+        Currently, I am building products that integrates with 🤖AI.
+        <br />
+        <br />
+        Checkout my personal blog:{' '}
+        <StandardLink href="https://sathishkannan162.github.io">
+          {' '}
+          https://sathishkannan162.github.io
+        </StandardLink>
+        <br />
+        <br />
+        Checkout my{' '}
+        <StandardLink href="https://www.linkedin.com/in/sathish-kannan-a48a39166/">
+          LinkedIn
+        </StandardLink>
+        ,{' '}
+        <StandardLink href="https://twitter.com/Sathish06030039">
+          Twitter
+        </StandardLink>
+        ,{' '}
+        <StandardLink href="https://www.instagram.com/satishkannan162/">
+          Instagram
+        </StandardLink>{' '}
+        and{' '}
+        <StandardLink href="https://www.facebook.com/sathishkannan.m.3">
+          Facebook
+        </StandardLink>
+        .
       </Text>
     </PageContainer>
   );
