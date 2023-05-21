@@ -1,6 +1,6 @@
 import { Heading, Text, Image, Box, Link } from '@chakra-ui/react';
 import PageContainer from './PageContainer';
-import myPhoto from './assets/my_photo.jpg';
+import myPhoto from './assets/my_photo_about.jpg';
 import StandardLink from './StandardLink';
 
 export default function AboutPage() {
@@ -9,7 +9,7 @@ export default function AboutPage() {
       <Heading>About Me</Heading>
       <br />
       <Box maxW="400px" maxH="400px" float="left" pr={50}>
-        <Image src={myPhoto} borderRadius={9} />
+        <Image src={myPhoto} borderRadius={9} lazyload={true} />
       </Box>
       <Text fontSize={'lg'}>
         <Text>
@@ -39,8 +39,8 @@ export default function AboutPage() {
           ,{' '}
           <StandardLink href="https://www.instagram.com/satishkannan162/">
             Instagram
-          </StandardLink>
-          {' '}and{' '}
+          </StandardLink>{' '}
+          and{' '}
           <StandardLink href="https://www.facebook.com/sathishkannan.m.3">
             Facebook
           </StandardLink>
