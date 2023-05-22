@@ -93,6 +93,7 @@ export default function CallToActionWithVideo() {
                 </motion.span>
                 <motion.span
                   initial={{ rotateZ: -10 }}
+                  whileHover={{ rotateZ: -10 }}
                   animate={{ rotateZ: [10, -10, 10, -10, 0] }}
                   transition={{ duration: 2.0 }}
                   style={{ display: 'inline-block' }}
@@ -113,10 +114,7 @@ export default function CallToActionWithVideo() {
             </Heading>
             <Box maxW={{ base: '100%', md: '70%' }}>
               <Heading as="h4" size={'md'}>
-                <Text
-                  color={'gray.500'}
-                  textAlign="justify"
-                >
+                <Text color={'gray.500'} textAlign="justify">
                   I am a web developer🧑‍💻 from India. I recently graduated with
                   Masters from{' '}
                   <Text as={'span'} color={'blackAlpha.800'}>

@@ -35,7 +35,7 @@ const BlogCards = (props) => {
                     position="relative"
                     _hover={{ shadow: 'md' }}
                   >
-                    <Box maxH="160px" overflow="hidden">
+                    <Box maxH="160px" p={4} overflow="hidden">
                       <Image
                         src={blog.thumbnail}
                         overflow="clip"
