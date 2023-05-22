@@ -15,7 +15,6 @@ const HoverAnimationButton = () => {
     <motion.div
       onHoverStart={handleHover}
       onHoverEnd={handleHover}
-      // whileHover={{ scale: 1.1 }}
       transition={{ duration: 9.3 }}
     >
       <Button colorScheme="blue">

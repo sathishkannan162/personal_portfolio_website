@@ -116,7 +116,6 @@ export default function CallToActionWithVideo() {
                 <Text
                   color={'gray.500'}
                   textAlign="justify"
-                  // paddingEnd={{ base: 10, md: 110 }}
                 >
                   I am a web developer🧑‍💻 from India. I recently graduated with
                   Masters from{' '}

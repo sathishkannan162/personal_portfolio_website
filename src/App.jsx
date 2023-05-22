@@ -1,9 +1,6 @@
 import CallToActionWithVideo from './HeroSection';
 import BlogCards from './BlogList';
-import { Button, Box } from '@chakra-ui/react';
-import { Link } from 'react-router-dom';
-import { FaArrowRight } from 'react-icons/fa';
-import { motion } from 'framer-motion';
+import { Box } from '@chakra-ui/react';
 import HoverAnimationButton from './HoverAnimationButton';
 
 function App() {
@@ -20,15 +17,7 @@ function App() {
         paddingBottom={5}
         justifyContent="right"
       >
-        {/* <motion.div */}
-          {/* whileHover={{ scale: 1.1, rotate: 360 }} */}
-          {/* transition={{ duration: 0.3 }} */}
-        {/* > */}
           <HoverAnimationButton />
-          {/* <Button rightIcon={<FaArrowRight />} colorScheme={'blue'}> */}
-          {/* <Link to="/projects">All projects</Link> */}
-          {/* </Button> */}
-        {/* </motion.div> */}
       </Box>
     </div>
   );

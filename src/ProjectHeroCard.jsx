@@ -6,7 +6,6 @@ const ProjectHeroCard = (props) => {
   const { url, title, children, link } = props;
   return (
     <Flex
-      // bg="#edf3f8"
       _dark={{ bg: '#3e3e3e' }}
       w="full"
       pb={10}
@@ -42,7 +41,6 @@ const ProjectHeroCard = (props) => {
 
         <Box
           py={{ base: 2, md: 8 }}
-          // py={12}
           pl={10}
           maxW={{ base: 'xl', lg: '5xl' }}
           w={{ lg: '50%' }}

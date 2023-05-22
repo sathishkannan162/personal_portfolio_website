@@ -30,7 +30,6 @@ const BlogCards = (props) => {
                 <a href={blog.link} target="_blank">
                   <Box
                     borderWidth="1px"
-                    // shadow="md"
                     rounded="lg"
                     overflow="hidden"
                     position="relative"
