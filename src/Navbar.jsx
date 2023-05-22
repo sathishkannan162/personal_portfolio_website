@@ -16,6 +16,7 @@ import {
 import { AiOutlineMenu } from 'react-icons/ai';
 import Logo from './assets/website_logo.png';
 import { Link } from 'react-router-dom';
+import MenuContainer from './ProjectMenu';
 
 const Navbar = () => {
   const bg = useColorModeValue('white', 'gray.800');
@@ -64,8 +65,11 @@ const Navbar = () => {
               <Button variant="ghost">
                 <Link to="/">🏠Home</Link>
               </Button>
-              <Button variant="ghost">
-                <Link to="/projects">🏅Projects</Link>
+              {/* <Button variant="ghost"> */}
+              {/* <Link to="/projects">🏅Projects</Link> */}
+              {/* </Button> */}
+              <Button variant="ghost" pl={0}>
+                <MenuContainer />
               </Button>
               <Button variant="ghost">
                 <Link to="/about">✨About Me</Link>

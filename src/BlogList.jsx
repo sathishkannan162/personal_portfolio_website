@@ -14,6 +14,7 @@ import {
 } from '@chakra-ui/react';
 import projects from './projectInfoArray.js';
 import RiseAnimation from './RiseAnimation.jsx';
+import projectTags from './projectTags.js';
 
 function truncateBlogTitle(title, limit) {
   if (title.length <= limit) {
@@ -22,18 +23,6 @@ function truncateBlogTitle(title, limit) {
     var truncatedTitle = title.slice(0, limit - 3) + '...';
     return truncatedTitle;
   }
-}
-
-function getUniqueTags(projects) {
-  const tagsSet = new Set();
-
-  projects.forEach((project) => {
-    project.tags.forEach((tag) => {
-      tagsSet.add(tag);
-    });
-  });
-
-  return Array.from(tagsSet);
 }
 
 function filterProjectsByTag(projects, tag) {
@@ -48,7 +37,6 @@ const BlogCards = (props) => {
   const handleSelectTag = (e) => {
     setTagSelect(e.target.value);
   };
-  const tags = getUniqueTags(projects);
   return (
     <Container maxWidth="1200px" mx="auto" my="auto" p={{ base: 5, md: 10 }}>
       <Heading py={'3'}>{title}</Heading>
@@ -70,7 +58,7 @@ const BlogCards = (props) => {
               maxWidth={'200px'}
             >
               <option>All</option>
-              {tags.map((tag, index) => {
+              {projectTags.map((tag, index) => {
                 return <option key={index}>{tag}</option>;
               })}
             </Select>
