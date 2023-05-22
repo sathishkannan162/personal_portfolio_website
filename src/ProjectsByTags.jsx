@@ -3,7 +3,6 @@ import BlogCards from './BlogList';
 
 export default function ProjectsByTags() {
   const { tag } = useParams();
-  console.log(tag);
   return (
     <BlogCards
       title={`${tag} Projects`}
