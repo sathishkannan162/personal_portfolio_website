@@ -65,9 +65,7 @@ const Navbar = () => {
               <Button variant="ghost">
                 <Link to="/">🏠Home</Link>
               </Button>
-              {/* <Button variant="ghost"> */}
               <MenuContainer />
-              {/* </Button> */}
               <Button variant="ghost">
                 <Link to="/about">✨About Me</Link>
               </Button>
@@ -112,6 +110,7 @@ const Navbar = () => {
                 rounded="sm"
                 shadow="sm"
                 zIndex={2}
+                h={'80vh'}
               >
                 <CloseButton
                   aria-label="Close menu"
@@ -121,7 +120,7 @@ const Navbar = () => {
                 <Button w="full" variant="ghost">
                   <Link to="/">🏠Home</Link>
                 </Button>
-                  <MenuContainer />
+                <MenuContainer />
                 <Button w="full" variant="ghost">
                   <Link to="/about">✨About Me</Link>
                 </Button>
