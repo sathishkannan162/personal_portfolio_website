@@ -75,7 +75,7 @@ const DropDownMenu = ({ projectTags, closeMenu }) => {
         </PopoverTrigger>
 
         <PopoverContent
-          border={0}
+          // border={0}
           boxShadow={useColorModeValue(
             '2px 4px 6px rgba(160, 174, 192, 0.6)',
             '0 4px 6px rgba(9, 17, 28, 0.9)'
@@ -84,7 +84,7 @@ const DropDownMenu = ({ projectTags, closeMenu }) => {
           p={4}
           // offset={2}
           rounded="lg"
-          width={{ base: '90vw', sm: '250px', md: '500px' }}
+          width={{ base: '90vw', md: '500px' }}
           // maxW={'170px'}
         >
           <Wrap>
