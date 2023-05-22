@@ -6,9 +6,20 @@ import {
   Image,
   Text,
   Heading,
+  Tag,
+  HStack,
 } from '@chakra-ui/react';
 import projects from './projectInfoArray.js';
 import RiseAnimation from './RiseAnimation.jsx';
+
+function truncateBlogTitle(title, limit) {
+  if (title.length <= limit) {
+    return title;
+  } else {
+    var truncatedTitle = title.slice(0, limit - 3) + '...';
+    return truncatedTitle;
+  }
+}
 
 const BlogCards = (props) => {
   const { title, count, skip } = props;
@@ -41,10 +52,10 @@ const BlogCards = (props) => {
                         overflow="clip"
                         mx="auto"
                         alt="Blog image"
-                        lazyload="true"
+                        loading="lazy"
                       />
                     </Box>
-                    <Box p={{ base: 4, lg: 6 }}>
+                    <Box px={{ base: 4, lg: 6 }}>
                       <Box d="flex" alignItems="baseline">
                         <Box
                           fontWeight="semibold"
@@ -52,7 +63,7 @@ const BlogCards = (props) => {
                           letterSpacing="wide"
                           textTransform="uppercase"
                         >
-                          {blog.title}
+                          {truncateBlogTitle(blog.title, 30)}
                         </Box>
                       </Box>
                       <Box>
@@ -68,6 +79,9 @@ const BlogCards = (props) => {
                       >
                         {blog.content}
                       </Text>
+                      <Box py={2}>
+                        <Tag colorScheme={'teal'}>React</Tag>
+                      </Box>
                     </Box>
                   </Box>
                 </a>

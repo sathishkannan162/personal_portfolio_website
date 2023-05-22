@@ -14,7 +14,7 @@ export default function AboutPage() {
         float={{ base: 'none', md: 'left' }}
         pr={50}
       >
-        <Image src={myPhoto} borderRadius={9} />
+        <Image src={myPhoto} borderRadius={9} loading="lazy" />
       </Box>
       <Text fontSize={'lg'}>
         I am Sathish Kannan. I recently graduated from 🎓IIT Bombay. I am a self

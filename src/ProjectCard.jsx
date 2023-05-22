@@ -20,7 +20,7 @@ const Index = (props) => {
         overflow="hidden"
         bg={useColorModeValue('white', 'gray.800')}
       >
-        <Image src={image} objectFit="cover" w="100%" />
+        <Image src={image} objectFit="cover" w="100%" loading="lazy" />
         <Box p={{ base: 3, sm: 5 }}>
           <Box mb={6}>
             <chakra.h3
