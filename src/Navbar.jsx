@@ -65,7 +65,7 @@ const Navbar = () => {
               <Button variant="ghost">
                 <Link to="/">🏠Home</Link>
               </Button>
-              <MenuContainer />
+              <MenuContainer closeMenu={() => {}} />
               <Button variant="ghost">
                 <Link to="/about">✨About Me</Link>
               </Button>
@@ -117,14 +117,14 @@ const Navbar = () => {
                   onClick={mobileNav.onClose}
                 />
 
-                <Button w="full" variant="ghost">
+                <Button onClick={mobileNav.onClose} w="full" variant="ghost">
                   <Link to="/">🏠Home</Link>
                 </Button>
-                <MenuContainer />
-                <Button w="full" variant="ghost">
+                <MenuContainer closeMenu={mobileNav.onClose} />
+                <Button onClick={mobileNav.onClose} w="full" variant="ghost">
                   <Link to="/about">✨About Me</Link>
                 </Button>
-                <Button w="full" variant="ghost">
+                <Button onClick={mobileNav.onClose} w="full" variant="ghost">
                   <Link to="/contact">📞Contact</Link>
                 </Button>
               </VStack>

@@ -23,19 +23,19 @@ import projectTags from './projectTags.js';
 // import { Link } from 'react-router-dom';
 import { Link as RouterLink } from 'react-router-dom';
 
-const MenuContainer = () => {
+const MenuContainer = ({ closeMenu }) => {
   return (
     <Flex
       justifyContent={{ base: 'flex-start', sm: 'center' }}
       alignItems="flex-start"
     >
-      <DropDownMenu projectTags={projectTags} />
+      <DropDownMenu projectTags={projectTags} closeMenu={closeMenu} />
     </Flex>
   );
 };
 
 // Ideally, DropDownMenu component should be used. The MenuContainer component is used to style the preview.
-const DropDownMenu = ({ projectTags }) => {
+const DropDownMenu = ({ projectTags, closeMenu }) => {
   const linkColor = 'blue.200';
   const { onOpen, onClose, isOpen } = useDisclosure();
 
@@ -88,9 +88,19 @@ const DropDownMenu = ({ projectTags }) => {
           // maxW={'170px'}
         >
           <Wrap>
-            <DropDownItem key={'all'} href={'/projects'} tag="All Projects" />
+            <DropDownItem
+              key={'all'}
+              href={'/projects'}
+              tag="All Projects"
+              closeMenu={closeMenu}
+            />
             {projectTags.map((tag, index) => (
-              <DropDownItem key={index} href={`/projects/${tag}`} tag={tag} />
+              <DropDownItem
+                key={index}
+                href={`/projects/${tag}`}
+                tag={tag}
+                closeMenu={closeMenu}
+              />
             ))}
           </Wrap>
         </PopoverContent>
@@ -99,9 +109,9 @@ const DropDownMenu = ({ projectTags }) => {
   );
 };
 
-const DropDownItem = ({ href, tag, onClose }) => {
+const DropDownItem = ({ href, tag, closeMenu }) => {
   return (
-    <Button variant="ghost" justifyContent={'left'}>
+    <Button variant="ghost" justifyContent={'left'} onClick={closeMenu}>
       <RouterLink to={href}>
         <Stack direction="row" align="center">
           <Box _hover={{ backgroundColor: 'grey.100' }}>
