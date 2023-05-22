@@ -39,15 +39,11 @@ function filterProjectsByTag(projects, tag) {
 }
 const BlogCards = (props) => {
   const { title, count, skip, interactive, tag } = props;
-  // const [tagSelect, setTagSelect] = useState(tag || 'All');
   const [text, setText] = useState('');
   const [tagSelect, setTagSelect] = useState(tag || 'All');
-  const handleSelectTag = (e) => {
-    setTagSelect(e.target.value);
-  };
   return (
     <Container maxWidth="1200px" mx="auto" my="auto" p={{ base: 5, md: 10 }}>
-      <Heading py={'3'}>{title}</Heading>
+      {!interactive && <Heading py={3}>{title}</Heading>}
       {interactive && (
         <Box>
           <Flex
@@ -56,6 +52,7 @@ const BlogCards = (props) => {
             justify={'space-between'}
             alignItems={'center'}
           >
+            <Heading py={0}>{title}</Heading>
             <Spacer />
             <Heading as={'h3'} fontSize={18} fontWeight={400} px={2}>
               <Text>Select Tag:</Text>
