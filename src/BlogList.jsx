@@ -10,6 +10,7 @@ import {
   HStack,
   Select,
   Flex,
+  Spacer,
 } from '@chakra-ui/react';
 import projects from './projectInfoArray.js';
 import RiseAnimation from './RiseAnimation.jsx';
@@ -53,11 +54,21 @@ const BlogCards = (props) => {
       <Heading py={'3'}>{title}</Heading>
       {interactive && (
         <Box>
-          <Flex flexDir={'row'}>
-            <Heading as={'h3'} fontSize={15}>
+          <Flex
+            flexDir={'row'}
+            py={4}
+            justify={'space-between'}
+            alignItems={'center'}
+          >
+            <Spacer />
+            <Heading as={'h3'} fontSize={18} fontWeight={400} px={2}>
               <Text>Select Tag:</Text>
             </Heading>
-            <Select value={tagSelect} onChange={handleSelectTag}>
+            <Select
+              value={tagSelect}
+              onChange={handleSelectTag}
+              maxWidth={'200px'}
+            >
               <option>All</option>
               {tags.map((tag, index) => {
                 return <option key={index}>{tag}</option>;
