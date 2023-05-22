@@ -19,11 +19,13 @@ import Footer from '../Footer';
 
 export default function Root() {
   return (
-    <ChakraProvider>
-      {/* <ChakraProvider theme={customTheme}> */}
-      <Navbar />
-      <Outlet />
-      <Footer />
-    </ChakraProvider>
+    <>
+      <ChakraProvider>
+        {/* <ChakraProvider theme={customTheme}> */}
+        <Navbar />
+        <Outlet />
+        <Footer />
+      </ChakraProvider>
+    </>
   );
 }

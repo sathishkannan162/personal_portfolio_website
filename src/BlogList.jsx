@@ -15,6 +15,12 @@ import {
 import projects from './projectInfoArray.js';
 import RiseAnimation from './RiseAnimation.jsx';
 import projectTags from './projectTags.js';
+import ComboBox from './AutoCompleteMui.jsx';
+import { ThemeProvider, createTheme } from '@mui/material';
+
+const muiTheme = createTheme();
+
+// import AutoSuggestSearchBar from './AutoComplete.jsx';
 
 function truncateBlogTitle(title, limit) {
   if (title.length <= limit) {
@@ -33,6 +39,8 @@ function filterProjectsByTag(projects, tag) {
 }
 const BlogCards = (props) => {
   const { title, count, skip, interactive, tag } = props;
+  // const [tagSelect, setTagSelect] = useState(tag || 'All');
+  const [text, setText] = useState('');
   const [tagSelect, setTagSelect] = useState(tag || 'All');
   const handleSelectTag = (e) => {
     setTagSelect(e.target.value);
@@ -42,6 +50,7 @@ const BlogCards = (props) => {
       <Heading py={'3'}>{title}</Heading>
       {interactive && (
         <Box>
+          <Heading>ComboBox</Heading>
           <Flex
             flexDir={'row'}
             py={4}
@@ -52,16 +61,14 @@ const BlogCards = (props) => {
             <Heading as={'h3'} fontSize={18} fontWeight={400} px={2}>
               <Text>Select Tag:</Text>
             </Heading>
-            <Select
-              value={tagSelect}
-              onChange={handleSelectTag}
-              maxWidth={'200px'}
-            >
-              <option>All</option>
-              {projectTags.map((tag, index) => {
-                return <option key={index}>{tag}</option>;
-              })}
-            </Select>
+            <ThemeProvider theme={muiTheme}>
+              <ComboBox
+                text={text}
+                setText={setText}
+                tagSelect={tagSelect}
+                setTagSelect={setTagSelect}
+              />
+            </ThemeProvider>
           </Flex>
         </Box>
       )}
