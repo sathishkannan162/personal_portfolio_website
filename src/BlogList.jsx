@@ -32,8 +32,8 @@ function filterProjectsByTag(projects, tag) {
   return projects.filter((project) => project.tags.includes(tag));
 }
 const BlogCards = (props) => {
-  const { title, count, skip, interactive } = props;
-  const [tagSelect, setTagSelect] = useState('All');
+  const { title, count, skip, interactive, tag } = props;
+  const [tagSelect, setTagSelect] = useState(tag || 'All');
   const handleSelectTag = (e) => {
     setTagSelect(e.target.value);
   };
@@ -66,8 +66,8 @@ const BlogCards = (props) => {
         </Box>
       )}
       <SimpleGrid columns={[1, 2, 3]} spacing="15px">
-        {filterProjectsByTag(projects, tagSelect)
-          .slice(skip, count + skip)
+        {filterProjectsByTag(projects, tag || tagSelect)
+          .slice(skip, count ? count + skip : undefined)
           .map((blog) => {
             return (
               <Box position="relative" key={blog.projectID}>

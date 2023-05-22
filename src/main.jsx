@@ -7,6 +7,7 @@ import App from './App.jsx';
 import ProjectsPage from './ProjectsPage.jsx';
 import ContactPage from './ContactPage.jsx';
 import AboutPage from './AboutPage.jsx';
+import ProjectsByTags from './ProjectsByTags.jsx';
 
 const router = createBrowserRouter([
   {
@@ -20,12 +21,16 @@ const router = createBrowserRouter([
         element: <ContactPage />,
       },
       {
+        path: '/about',
+        element: <AboutPage />,
+      },
+      {
         path: '/projects',
         element: <ProjectsPage />,
       },
       {
-        path: '/about',
-        element: <AboutPage />,
+        path: '/projects/:tag',
+        element: <ProjectsByTags />,
       },
     ],
   },
