@@ -50,7 +50,6 @@ const BlogCards = (props) => {
       <Heading py={'3'}>{title}</Heading>
       {interactive && (
         <Box>
-          <Heading>ComboBox</Heading>
           <Flex
             flexDir={'row'}
             py={4}
