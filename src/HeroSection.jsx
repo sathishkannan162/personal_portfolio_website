@@ -8,6 +8,8 @@ import {
   Image,
 } from '@chakra-ui/react';
 import HeroImage from './assets/my_photo.jpg';
+import RiseAnimation from './RiseAnimation';
+import { motion } from 'framer-motion';
 
 export default function CallToActionWithVideo() {
   return (
@@ -26,22 +28,24 @@ export default function CallToActionWithVideo() {
             position={'relative'}
             w={'full'}
           >
-            <Box
-              position={'relative'}
-              maxHeight={'500px'}
-              width={'500px'}
-              overflow={'clip'}
-            >
-              <Image
-                alt={'Hero Image'}
-                fit={'cover'}
-                align={'center'}
-                w={'100%'}
-                h={'100%'}
-                src={HeroImage}
-                borderRadius={10}
-              />
-            </Box>
+            <RiseAnimation>
+              <Box
+                position={'relative'}
+                maxHeight={'500px'}
+                width={'500px'}
+                overflow={'clip'}
+              >
+                <Image
+                  alt={'Hero Image'}
+                  fit={'cover'}
+                  align={'center'}
+                  w={'100%'}
+                  h={'100%'}
+                  src={HeroImage}
+                  borderRadius={10}
+                />
+              </Box>
+            </RiseAnimation>
           </Flex>
           <Stack
             flex={1}
@@ -53,6 +57,7 @@ export default function CallToActionWithVideo() {
               fontWeight={600}
               fontSize={{ base: '3xl', sm: '4xl', lg: '6xl' }}
             >
+              {' '}
               <Text
                 as={'span'}
                 position={'relative'}
@@ -67,7 +72,35 @@ export default function CallToActionWithVideo() {
                   bg: 'red.400',
                 }}
               >
-                Hey!👋
+                <Box
+                  as="span"
+                  display="block"
+                  position="absolute"
+                  bg={'gray.200'}
+                  w="60%"
+                  h={'1px'}
+                  bottom={-2}
+                />
+                <motion.span
+                  whileHover={{ translateY: -10 }}
+                  transition={{ duration: 0.5 }}
+                  style={{
+                    display: 'inline-block',
+                    cursor: 'pointer',
+                  }}
+                >
+                  Hey!{' '}
+                </motion.span>
+                <motion.span
+                  initial={{ rotateZ: -10 }}
+                  animate={{ rotateZ: [10, -10, 10, -10, 0] }}
+                  transition={{ duration: 2.0 }}
+                  style={{ display: 'inline-block' }}
+                >
+                  <span role="img" aria-label="wave-hand">
+                    👋
+                  </span>
+                </motion.span>
               </Text>
             </Heading>
             <Heading

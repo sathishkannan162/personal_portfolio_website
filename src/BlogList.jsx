@@ -8,6 +8,7 @@ import {
   Heading,
 } from '@chakra-ui/react';
 import projects from './projectInfoArray.js';
+import RiseAnimation from './RiseAnimation.jsx';
 
 const BlogCards = (props) => {
   const { title, count, skip } = props;
@@ -18,57 +19,60 @@ const BlogCards = (props) => {
         {projects.slice(skip, count + skip).map((blog) => {
           return (
             <Box position="relative" key={blog.projectID}>
-              <Box
-                fontSize="sm"
-                position="absolute"
-                right="5px"
-                margin="5px"
-                zIndex="1"
-              ></Box>
-              <a href={blog.link} target="_blank">
+              <RiseAnimation>
                 <Box
-                  borderWidth="1px"
-                  shadow="md"
-                  rounded="lg"
-                  overflow="hidden"
-                  position="relative"
-                >
-                  <Box maxH="160px" overflow="hidden">
-                    <Image
-                      src={blog.thumbnail}
-                      overflow="clip"
-                      mx="auto"
-                      alt="Blog image"
-                      lazyload="true"
-                    />
-                  </Box>
-                  <Box p={{ base: 4, lg: 6 }}>
-                    <Box d="flex" alignItems="baseline">
-                      <Box
-                        fontWeight="semibold"
-                        as="h2"
-                        letterSpacing="wide"
-                        textTransform="uppercase"
-                      >
-                        {blog.title}
+                  fontSize="sm"
+                  position="absolute"
+                  right="5px"
+                  margin="5px"
+                  zIndex="1"
+                ></Box>
+                <a href={blog.link} target="_blank">
+                  <Box
+                    borderWidth="1px"
+                    // shadow="md"
+                    rounded="lg"
+                    overflow="hidden"
+                    position="relative"
+                    _hover={{ shadow: 'md' }}
+                  >
+                    <Box maxH="160px" overflow="hidden">
+                      <Image
+                        src={blog.thumbnail}
+                        overflow="clip"
+                        mx="auto"
+                        alt="Blog image"
+                        lazyload="true"
+                      />
+                    </Box>
+                    <Box p={{ base: 4, lg: 6 }}>
+                      <Box d="flex" alignItems="baseline">
+                        <Box
+                          fontWeight="semibold"
+                          as="h2"
+                          letterSpacing="wide"
+                          textTransform="uppercase"
+                        >
+                          {blog.title}
+                        </Box>
                       </Box>
+                      <Box>
+                        <Box color="gray.600" fontSize="sm"></Box>
+                      </Box>
+                      <Text
+                        mt="1"
+                        fontWeight="semibold"
+                        noOfLines={3}
+                        lineHeight="tight"
+                        color="gray.600"
+                        fontSize="sm"
+                      >
+                        {blog.content}
+                      </Text>
                     </Box>
-                    <Box>
-                      <Box color="gray.600" fontSize="sm"></Box>
-                    </Box>
-                    <Text
-                      mt="1"
-                      fontWeight="semibold"
-                      noOfLines={3}
-                      lineHeight="tight"
-                      color="gray.600"
-                      fontSize="sm"
-                    >
-                      {blog.content}
-                    </Text>
                   </Box>
-                </Box>
-              </a>
+                </a>
+              </RiseAnimation>
             </Box>
           );
         })}
