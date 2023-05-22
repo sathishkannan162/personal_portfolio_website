@@ -4,23 +4,18 @@ import {
   Flex,
   Box,
   Popover,
-  Link,
   Text,
   Icon,
-  HStack,
   PopoverTrigger,
   PopoverContent,
   useDisclosure,
   useColorModeValue,
   Button,
-  Container,
   Heading,
   Wrap,
 } from '@chakra-ui/react';
-// Here we have used react-icons package for the icons
 import { FaChevronDown } from 'react-icons/fa';
 import projectTags from './projectTags.js';
-// import { Link } from 'react-router-dom';
 import { Link as RouterLink } from 'react-router-dom';
 
 const MenuContainer = ({ closeMenu }) => {
@@ -75,17 +70,14 @@ const DropDownMenu = ({ projectTags, closeMenu }) => {
         </PopoverTrigger>
 
         <PopoverContent
-          // border={0}
           boxShadow={useColorModeValue(
             '2px 4px 6px rgba(160, 174, 192, 0.6)',
             '0 4px 6px rgba(9, 17, 28, 0.9)'
           )}
           bg={useColorModeValue('white', 'gray.800')}
           p={4}
-          // offset={2}
           rounded="lg"
           width={{ base: '90vw', md: '500px' }}
-          // maxW={'170px'}
         >
           <Wrap>
             <DropDownItem
