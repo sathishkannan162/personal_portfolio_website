@@ -285,7 +285,7 @@ const projects = [
     link: 'https://sathishkannanportfolio.netlify.app/',
     thumbnail: 'https://projectimages.netlify.app/project_32.png',
     content:
-      'This is the code for my portfolio website. I used React and Chakra UI to construct the website.',
+      'This is the code for my portfolio website. I used React and Chakra UI to construct the website. Framer motion is used to animate elements. You can view all the projects I have done in this page and you can visit them by clicking on respective cards.',
   },
 ];
 export default projects.reverse();
