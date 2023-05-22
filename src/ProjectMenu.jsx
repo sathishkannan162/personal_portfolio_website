@@ -13,6 +13,8 @@ import {
   useDisclosure,
   useColorModeValue,
   Button,
+  Container,
+  Heading,
 } from '@chakra-ui/react';
 // Here we have used react-icons package for the icons
 import { FaChevronDown } from 'react-icons/fa';
@@ -46,13 +48,15 @@ const DropDownMenu = ({ projectTags }) => {
       >
         <PopoverTrigger>
           <HStack alignItems="center" cursor="pointer" role="group">
-            <Link
-              _hover={{
-                textDecor: 'none',
-              }}
+            <Box
+              p={2}
+              rounded="md"
+              _groupHover={{ backgroundColor: 'gray.200' }}
             >
-              🏅Projects
-            </Link>
+              <Heading fontSize={16} fontWeight={500}>
+                🏅Projects
+              </Heading>
+            </Box>
             <Icon
               as={FaChevronDown}
               h={4}
@@ -103,11 +107,18 @@ const DropDownItem = ({ linkColor, href, tag }) => {
   return (
     <Button variant="ghost" justifyContent={'left'}>
       <RouterLink to={href}>
+        {/* <Container */}
+        {/* p={2} */}
+        {/* _groupHover={{ color: linkColor, backgroundColor: 'grey.100' }} */}
+        {/* > */}
+        {/* <Link variant="ghost" justifyContent={'left'}> */}
         <Stack direction="row" align="center">
           <Box _hover={{ backgroundColor: 'grey.100' }}>
             <Text fontWeight={400}>{tag}</Text>
           </Box>
         </Stack>
+        {/* </Link> */}
+        {/* </Container> */}
       </RouterLink>
     </Button>
   );

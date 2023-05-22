@@ -65,9 +65,9 @@ const Navbar = () => {
               <Button variant="ghost">
                 <Link to="/">🏠Home</Link>
               </Button>
-              <Button variant="ghost">
-                <MenuContainer />
-              </Button>
+              {/* <Button variant="ghost"> */}
+              <MenuContainer />
+              {/* </Button> */}
               <Button variant="ghost">
                 <Link to="/about">✨About Me</Link>
               </Button>
@@ -121,9 +121,7 @@ const Navbar = () => {
                 <Button w="full" variant="ghost">
                   <Link to="/">🏠Home</Link>
                 </Button>
-                <Button w="full" variant="ghost">
                   <MenuContainer />
-                </Button>
                 <Button w="full" variant="ghost">
                   <Link to="/about">✨About Me</Link>
                 </Button>
