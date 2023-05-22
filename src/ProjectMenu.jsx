@@ -15,6 +15,7 @@ import {
   Button,
   Container,
   Heading,
+  Wrap,
 } from '@chakra-ui/react';
 // Here we have used react-icons package for the icons
 import { FaChevronDown } from 'react-icons/fa';
@@ -43,11 +44,12 @@ const DropDownMenu = ({ projectTags }) => {
       <Popover
         trigger="hover"
         placement="bottom-start"
+        offset={[-95, 10]}
         onOpen={onOpen}
         onClose={onClose}
       >
         <PopoverTrigger>
-          <HStack
+          <Flex
             alignItems="center"
             cursor="pointer"
             role="group"
@@ -69,7 +71,7 @@ const DropDownMenu = ({ projectTags }) => {
               transition="all .25s ease-in-out"
               transform={isOpen ? 'rotate(180deg)' : ''}
             />
-          </HStack>
+          </Flex>
         </PopoverTrigger>
 
         <PopoverContent
@@ -80,22 +82,24 @@ const DropDownMenu = ({ projectTags }) => {
           )}
           bg={useColorModeValue('white', 'gray.800')}
           p={4}
+          // offset={2}
           rounded="lg"
-          maxW={'170px'}
+          width={{ base: '90vw', sm: '250px', md: '500px' }}
+          // maxW={'170px'}
         >
-          <Flex flexDir={'column'}>
+          <Wrap>
             <DropDownItem key={'all'} href={'/projects'} tag="All Projects" />
             {projectTags.map((tag, index) => (
               <DropDownItem key={index} href={`/projects/${tag}`} tag={tag} />
             ))}
-          </Flex>
+          </Wrap>
         </PopoverContent>
       </Popover>
     </Stack>
   );
 };
 
-const DropDownItem = ({ href, tag }) => {
+const DropDownItem = ({ href, tag, onClose }) => {
   return (
     <Button variant="ghost" justifyContent={'left'}>
       <RouterLink to={href}>
