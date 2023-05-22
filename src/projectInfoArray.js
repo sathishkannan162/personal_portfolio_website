@@ -7,6 +7,7 @@ const projects = [
     content:
       'This project was done using PostgresSQL and done as a part of coursework of Relational databases on freeCodeCamp.',
     thumbnail: 'https://projectimages.netlify.app/project_1.png',
+    tags: ['PostgreSQL', 'Bash'],
   },
   {
     projectID: 2,
@@ -16,6 +17,7 @@ const projects = [
     content:
       'This project was done as a part of the relational database course on freeCodeCamp.',
     thumbnail: 'https://projectimages.netlify.app/project_2.png',
+    tags: ['PostgreSQL', 'Bash'],
   },
   {
     projectID: 3,
@@ -25,6 +27,7 @@ const projects = [
     content:
       'This project based on the relational database was done as a part of coursework of Relational database on freeCodeCamp. You can run the script salon.sh and enter the customer info and appointment details. The details will be added to the salon database.',
     thumbnail: 'https://projectimages.netlify.app/project_3.png',
+    tags: ['PostgreSQL', 'Bash'],
   },
   {
     projectID: 4,
@@ -34,6 +37,7 @@ const projects = [
     content:
       "This project was done as a part of coursework of the Relational database course on freeCodeCamp.\nYou should import the database using the SQL file. Then you can run all the scripts in the repository. There are three script files in this code:\n- The first one capitalizes the first letter of the symbols in the elements table.\n- The second one removes trailing zeros from the end of atomic masses of elements in the properties table.\n- In the third file named element.sh, you should pass an argument. The argument can be the symbol or the atomic number or the name of the element. If you don't pass an argument, it will print to give an argument. If an argument that is not in the database is present, then it will print a line explaining the same.",
     thumbnail: 'https://projectimages.netlify.app/project_4.png',
+    tags: ['PostgreSQL', 'Bash'],
   },
   {
     projectID: 5,
@@ -43,6 +47,7 @@ const projects = [
     content:
       'A text-based number guessing game made using PostgreSQL and bash scripting. This project was done as a part of coursework of the relational database on freeCodeCamp.\nYou need to make a database on your machine with the SQL file. Then you can run the number_guess.sh file.\n- It will ask for a username and store it in the database.\n- It will print a welcome message if you are a new user.\n- It will show a message with total games played and the best guesses score for an existing user.\n- It will display a message with the guess count when you finish the game.\n- The game data (guesses, username) will be stored in the database at the end of each game.',
     thumbnail: 'https://projectimages.netlify.app/project_5.png',
+    tags: ['PostgreSQL', 'Bash'],
   },
   {
     projectID: 6,
@@ -52,6 +57,7 @@ const projects = [
     content:
       'Simple form built with HTML and CSS. Completed as a part of freecodecamp responsive web design course.',
     thumbnail: 'https://projectimages.netlify.app/project_6.png',
+    tags: ['Html', 'Css'],
   },
   {
     projectID: 7,
@@ -61,6 +67,7 @@ const projects = [
     content:
       'Simple tribute page built with HTML and CSS. Completed as a part of freecodecamp responsive web design course.',
     thumbnail: 'https://projectimages.netlify.app/project_7.png',
+    tags: ['Html', 'Css'],
   },
   {
     projectID: 8,
@@ -70,6 +77,7 @@ const projects = [
     content:
       'Simple technical documentation page built with HTML and CSS. Completed as a part of freecodecamp responsive web design course.',
     thumbnail: 'https://projectimages.netlify.app/project_8.png',
+    tags: ['Html', 'Css'],
   },
   {
     projectID: 9,
@@ -79,6 +87,7 @@ const projects = [
     content:
       'Simple product landing page built with HTML and CSS. Completed as a part of freecodecamp responsive web design course.',
     thumbnail: 'https://projectimages.netlify.app/project_9.png',
+    tags: ['Html', 'Css'],
   },
   {
     projectID: 10,
@@ -88,6 +97,7 @@ const projects = [
     content:
       'Simple personal portfolio page built with HTML and CSS. Completed as a part of freecodecamp responsive web design course.',
     thumbnail: 'https://projectimages.netlify.app/project_10.png',
+    tags: ['Html', 'Css'],
   },
   {
     projectID: 11,
@@ -97,6 +107,7 @@ const projects = [
     content:
       'This app is built with React. This app generates random quotes whenever you click the new quote button. You can share the quote to Twitter or Tumblr by clicking on the corresponding share buttons. This project was done as a part of coursework of Frontend development libraries on freeCodeCamp.',
     thumbnail: 'https://projectimages.netlify.app/project_11.png',
+    tags: ['React'],
   },
   {
     projectID: 12,
@@ -106,6 +117,7 @@ const projects = [
     content:
       'This markdown previewer project is built using React and Redux. Redux was used for state management. You can maximize and minimize the editors and previewers. You can view real-time changes in the preview canvas. This project was done as a part of coursework of Frontend development libraries on freeCodeCamp.',
     thumbnail: 'https://projectimages.netlify.app/project_12.png',
+    tags: ['React'],
   },
   {
     projectID: 13,
@@ -115,6 +127,7 @@ const projects = [
     content:
       'This Drum Machine project was done using React and Redux. You can play different sounds, and the sound name is displayed in a small display. You can also use keyboard keys to play the drum machine. This project was done as a part of coursework of Frontend development libraries on freeCodeCamp.',
     thumbnail: 'https://projectimages.netlify.app/project_13.png',
+    tags: ['React'],
   },
   {
     projectID: 14,
@@ -124,6 +137,7 @@ const projects = [
     content:
       'A simple calculator app. You can do any basic calculations using this app. This app was done using React and Redux. This project was done as a part of coursework of Frontend development libraries on freeCodeCamp.',
     thumbnail: 'https://projectimages.netlify.app/project_14.png',
+    tags: ['React'],
   },
   {
     projectID: 15,
@@ -133,6 +147,7 @@ const projects = [
     content:
       'A simple Pomodoro app built using React and Redux. In this app, you can set session and break length and use it as a pomodoro timer. Pressing reset makes the app go to the original state. This project was done as a part of coursework of Frontend development libraries on freeCodeCamp.',
     thumbnail: 'https://projectimages.netlify.app/project_15.png',
+    tags: ['React'],
   },
   {
     projectID: 16,
@@ -142,6 +157,7 @@ const projects = [
     thumbnail: 'https://projectimages.netlify.app/project_16.png',
     content:
       'This chart is used using D3 JavaScript library. This chart displays the USP GDP over years. It has a nice tooltip element. You can use your own data by replacing the JSON link in the fetch method. You have to modify your data to suit the program, other than that everything else will work fine.',
+    tags: ['Data Visulisation', 'D3.js'],
   },
   {
     projectID: 17,
@@ -151,6 +167,7 @@ const projects = [
     thumbnail: 'https://projectimages.netlify.app/project_17.png',
     content:
       'This chart shows doping incidents in bicycle racing in each year and their relevance to finish time by the winner. Hover over the data points to get more information about that incident. Orange color circles represent winners without doping incidents. Blue color represents winners with doping incidents. You can insert your data by replacing the JSON file link in the fetch method.',
+    tags: ['Data Visulisation', 'D3.js'],
   },
   {
     projectID: 18,
@@ -160,6 +177,7 @@ const projects = [
     thumbnail: 'https://projectimages.netlify.app/project_18.png',
     content:
       'This heat map shows the variation of temperature in a certain month of the year. Different colors represent different ranges of temperatures. It has a tooltip that shows more information on a point when you hover over the data point. The data point will also be highlighted while hovering over it. You can use the heat map for your own data by customizing your data similar to the URL in the variable URL and then replace the URL with your own URL. You can choose your own colors by changing the colorList array. You can give any number of colors, the program will take care of the rest. If you want to position the chart, change the margin.top and margin.left variables.',
+    tags: ['Data Visulisation', 'D3.js'],
   },
   {
     projectID: 19,
@@ -169,6 +187,7 @@ const projects = [
     thumbnail: 'https://projectimages.netlify.app/project_19.png',
     content:
       "This map shows the percentage of adults over 25 with a bachelor's degree or higher in different counties in the USA. This map was constructed using Topojson.js and D3.js libraries. When you hover over a county, you will get more information via a tooltip that appears. You can use your own data by changing the URLs in the d3.json method. You can change the colors by changing the colors array in the script.js file. Different sequential palettes were generated in color brewer and added for convenience in the file.",
+    tags: ['Data Visulisation', 'D3.js'],
   },
   {
     projectID: 20,
@@ -178,6 +197,7 @@ const projects = [
     thumbnail: 'https://projectimages.netlify.app/project_20.png',
     content:
       'This tree map shows the top 100 Kickstarter campaigns based on their funding. They are grouped by different categories in different colors. When you hover over a tile, you will see a tooltip that will give more information about that Kickstarter campaign. Two other datasets are given as comments. You can use them for the tree map just by replacing the URL variable with those links. But you have to change the title and description for the same.',
+    tags: ['Data Visulisation', 'D3.js'],
   },
   {
     projectID: 21,
@@ -187,6 +207,7 @@ const projects = [
     thumbnail: 'https://projectimages.netlify.app/project_21.png',
     content:
       'This project was done as a part of Backend development and APIs course on Freecodecamp and is an exact replica of [https://timestamp-microservice.freecodecamp.rocks/](https://timestamp-microservice.freecodecamp.rocks/). There will be examples on the site on how to use the API. You can insert other dates at the end of the HTTP string. You will get the date in milliseconds since Jan 1, 1970, 00:00:00 GMT and also the date in UTC. You can pass values as a date or milliseconds or date strings.',
+    tags: ['Express', 'Nodejs'],
   },
   {
     projectID: 22,
@@ -196,6 +217,7 @@ const projects = [
     thumbnail: 'https://projectimages.netlify.app/project_22.png',
     content:
       'This project was done as a part of Backend development and APIs course on Freecodecamp and is an exact replica of [https://timestamp-microservice.freecodecamp.rocks/](https://timestamp-microservice.freecodecamp.rocks/). When you go to the /api/whoami page of this site, it will show information about your IP and browser in the form of JSON.',
+    tags: ['Express', 'Nodejs'],
   },
   {
     projectID: 23,
@@ -205,6 +227,7 @@ const projects = [
     thumbnail: 'https://projectimages.netlify.app/project_23.png',
     content:
       "This project was done as a part of Backend development and APIs course on Freecodecamp and is an exact replica of [https://url-shortener-microservice.freecodecamp.rocks/](https://url-shortener-microservice.freecodecamp.rocks/). There will be examples on the site on how to use the API. You can write the URL in the input field and click the POST button. Then the request will be received by the server, and it sends a JSON containing the short URL. You can use the shortened URL as '[https://url-shortener-microservice-project.sathishkannan16.repl.co/api/shorturl/{short](https://url-shortener-microservice-project.sathishkannan16.repl.co/api/shorturl/%7Bshort) url}'.",
+    tags: ['Express', 'Nodejs', 'MongoDB', 'Mongoose'],
   },
   {
     projectID: 24,
@@ -214,6 +237,7 @@ const projects = [
     thumbnail: 'https://projectimages.netlify.app/project_24.png',
     content:
       "This project was done as a part of Backend development and APIs course on Freecodecamp and is an exact replica of [https://exercise-tracker.freecodecamp.rocks/](https://exercise-tracker.freecodecamp.rocks/). There will be examples on the site on how to use the API. You can create a new user using the 'Create a New User' form. The user will be stored in a MongoDB database. When you create a user, you will get a JSON of the user with a username and an alphanumeric ID. Use this ID as a unique identifier to add user exercise logs to the database. You can query the database with user_id using `/api/user/:_id/logs`. It will send a JSON with all the exercises in the logs field. You can limit the number of exercises you want to query. You can also set from and to date to get exercises done by a user in a specified range.",
+    tags: ['Express', 'Nodejs'],
   },
   {
     projectID: 25,
@@ -223,6 +247,7 @@ const projects = [
     thumbnail: 'https://projectimages.netlify.app/project_25.png',
     content:
       'Upload the file, and the metadata such as file type and size of the file will be displayed as JSON. The uploaded file will be stored in the uploads folder without any file extension. You need to rename the file with appropriate extensions so that you would be able to view the image. You can also use the multer package to automatically set the file extension and file name. This project was done as a part of Backend development and APIs course on Freecodecamp and is an exact replica of [https://file-metadata-microservice.freecodecamp.rocks/](https://file-metadata-microservice.freecodecamp.rocks/). **Script handle_uploads.sh will delete files when the number of files exceeds more than 5.** You can change the number of files in uploads by changing the count variable in the script. The script should be run manually. In the future, we plan to run the script whenever a file is uploaded, and the oldest files will be deleted.',
+    tags: ['Express', 'Nodejs'],
   },
   {
     projectID: 26,
@@ -232,6 +257,7 @@ const projects = [
     thumbnail: 'https://projectimages.netlify.app/project_26.png',
     content:
       "This project converts Imperial units to metric units and vice versa. This project is implemented as an API. You can request the same service from other apps by making a GET request. You can send data using and get a post methods. You can use mathematical expressions in the input. You can also put the units in the form, and the output will be shown below. Use the units without space like '1.5km' rather than '1.5 km'. The tests for the program are written using chai and mocha. You can run the tests with 'npm test' or setting the 'NODE_ENV=test' in the '.env' file. When you enter an invalid number or unit, the API sends the text 'invalid unit' or 'invalid number' or 'invalid number and unit'. This project was done as a part of the Quality Assurance course on Freecodecamp and is an exact replica of [https://metric-imperial-converter.freecodecamp.rocks/](https://metric-imperial-converter.freecodecamp.rocks/).",
+    tags: ['Mocha', 'Chai', 'Express', 'Nodejs', 'Zombie.js', 'Testing'],
   },
   {
     projectID: 27,
@@ -241,6 +267,16 @@ const projects = [
     thumbnail: 'https://projectimages.netlify.app/project_27.png',
     content:
       "In this project:\n\n- The backend of the web page was built, and tests are written using chai, mocha, and zombie.\n- MongoDB was used as the database server, and mongoose is used to validate documents.\n- There is a sample form on the homepage in which you can create, update, close, and delete issues.\n- You can also visit '{homeURL}/{project}' to go to a project page in which you can create, close, and delete issues. All the issues will be shown as cards below the form.\n- In this project, you can send:\n  - GET requests to '/api/issues/{project}' to get the list of all issues in a project.\n    - You can do queries in the GET request to get only issues that meet certain conditions.\n  - POST requests with all IDs or only required IDs, and the issue will be saved to the database.\n  - PUT requests can update issues.\n  - DELETE requests with _id will delete the issue.\n\nThis project was done as a part of the Quality Assurance course on Freecodecamp and is an exact replica of [https://issue-tracker.freecodecamp.rocks/](https://issue-tracker.freecodecamp.rocks/).",
+    tags: [
+      'MongoDB',
+      'Mongoose',
+      'Mocha',
+      'Chai',
+      'Express',
+      'Nodejs',
+      'Zombie.js',
+      'Testing',
+    ],
   },
   {
     projectID: 28,
@@ -250,6 +286,16 @@ const projects = [
     thumbnail: 'https://projectimages.netlify.app/project_28.png',
     content:
       "This project was built using express. Tests for this project were written using chai, chai-http, and mocha. UI tests were written using the headless browser zombie.js along with former packages. The database used here is MongoDB, and mongoose was used for the validation of records that are sent to the database.\n\nYou can send GET, POST, and DELETE requests to the server on '/api/books' and '/api/books/[_id]'. Using them, you can add books, add comments to books, get data on a specific book or all books, delete a single book or all books. Refer to the user stories below for instructions on how to use them.\n\nCheck out the package.json for different scripts that can be run. To start the server with tests, you need to uncomment the 'NODE_ENV=test' in your .env file.\n\nThis project was done as a part of the Quality Assurance course on Freecodecamp and is an exact replica of [https://personal-library.freecodecamp.rocks/](https://personal-library.freecodecamp.rocks/).",
+    tags: [
+      'MongoDB',
+      'Mongoose',
+      'Mocha',
+      'Chai',
+      'Express',
+      'Nodejs',
+      'Zombie.js',
+      'Testing',
+    ],
   },
   {
     projectID: 29,
@@ -259,6 +305,7 @@ const projects = [
     thumbnail: 'https://projectimages.netlify.app/project_29.png',
     content:
       "**Attribution:**\n\nThis project solves a sudoku given as input by the user. It can also detect whether the sudoku can be solved. In the puzzle string, replace the empty values with '.' and press 'Solve' after inserting the puzzle string in the text area. The solution will be shown in the grid below.\n\nYou can also check whether a number can be placed at a specific position in the grid for the puzzle string given by the user. If there is a conflict, the conflict (row, column, region, or combinations of them) will be shown below after clicking the 'Check Placement' button.\n\nYou can use the API by sending POST requests to '/api/solve' and '/api/check' to the server.\n\nThis project was done as a part of the Quality Assurance course on Freecodecamp and is an exact replica of [https://sudoku-solver.freecodecamp.rocks/](https://sudoku-solver.freecodecamp.rocks/).",
+    tags: ['Mocha', 'Chai', 'Express', 'Nodejs', 'Zombie.js', 'Testing'],
   },
   {
     projectID: 30,
@@ -268,6 +315,7 @@ const projects = [
     thumbnail: 'https://projectimages.netlify.app/project_30.png',
     content:
       "You can input a text in American English and get the text translated into British English. The words that are translated are highlighted in green.\n\nYou can also send an API request to '/api/translate' with the text field as the text that needs to be translated and the locale field as 'american-to-british' or 'british-to-american', and the response will be a translated text in the translation field.\n\n**Attribution:** This project was done as a part of the Quality Assurance course on Freecodecamp and is an exact replica of [https://american-british-translator.freecodecamp.rocks/](https://american-british-translator.freecodecamp.rocks/).",
+    tags: ['Mocha', 'Chai', 'Express', 'Nodejs', 'Zombie.js', 'Testing'],
   },
   {
     projectID: 31,
@@ -277,6 +325,15 @@ const projects = [
     thumbnail: 'https://projectimages.netlify.app/project_31.png',
     content:
       "It can transcribe the user's voice and input it into the chat. The response will be provided by the OpenAI GPT-3.5 chat completion model.",
+    tags: [
+      'openAI',
+      'GPT3.5',
+      'Chakra UI',
+      'Material UI',
+      'React',
+      'Express',
+      'Nodejs',
+    ],
   },
   {
     projectID: 32,
@@ -286,6 +343,7 @@ const projects = [
     thumbnail: 'https://projectimages.netlify.app/project_32.png',
     content:
       'This is the code for my portfolio website. I used React and Chakra UI to construct the website. Framer motion is used to animate elements. You can view all the projects I have done in this page and you can visit them by clicking on respective cards.',
+    tags: ['Chakra UI', 'React', 'Framer Motion'],
   },
 ];
 export default projects.reverse();

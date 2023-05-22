@@ -79,9 +79,15 @@ const BlogCards = (props) => {
                       >
                         {blog.content}
                       </Text>
-                      <Box py={2}>
-                        <Tag colorScheme={'teal'}>React</Tag>
-                      </Box>
+                      <HStack py={2}>
+                        {blog.tags.slice(0, 3).map((tag, index) => {
+                          return (
+                            <Tag key={index} colorScheme={'teal'}>
+                              <Text fontSize={12}>{tag}</Text>
+                            </Tag>
+                          );
+                        })}
+                      </HStack>
                     </Box>
                   </Box>
                 </a>
