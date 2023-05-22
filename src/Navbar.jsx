@@ -65,10 +65,7 @@ const Navbar = () => {
               <Button variant="ghost">
                 <Link to="/">🏠Home</Link>
               </Button>
-              {/* <Button variant="ghost"> */}
-              {/* <Link to="/projects">🏅Projects</Link> */}
-              {/* </Button> */}
-              <Button variant="ghost" pl={0}>
+              <Button variant="ghost">
                 <MenuContainer />
               </Button>
               <Button variant="ghost">
@@ -125,7 +122,7 @@ const Navbar = () => {
                   <Link to="/">🏠Home</Link>
                 </Button>
                 <Button w="full" variant="ghost">
-                  <Link to="/projects">🏅Projects</Link>
+                  <MenuContainer />
                 </Button>
                 <Button w="full" variant="ghost">
                   <Link to="/about">✨About Me</Link>
