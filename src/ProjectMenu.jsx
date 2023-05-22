@@ -47,12 +47,14 @@ const DropDownMenu = ({ projectTags }) => {
         onClose={onClose}
       >
         <PopoverTrigger>
-          <HStack alignItems="center" cursor="pointer" role="group">
-            <Box
-              p={2}
-              rounded="md"
-              _groupHover={{ backgroundColor: 'gray.200' }}
-            >
+          <HStack
+            alignItems="center"
+            cursor="pointer"
+            role="group"
+            _hover={{ backgroundColor: 'gray.100' }}
+            rounded="md"
+          >
+            <Box p={3} rounded="md">
               <Heading fontSize={16} fontWeight={500}>
                 🏅Projects
               </Heading>
