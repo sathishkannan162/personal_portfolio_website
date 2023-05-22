@@ -32,7 +32,7 @@ export default function CallToActionWithVideo() {
               <Box
                 position={'relative'}
                 maxHeight={'500px'}
-                width={'500px'}
+                maxWidth={'500px'}
                 overflow={'clip'}
               >
                 <Image
