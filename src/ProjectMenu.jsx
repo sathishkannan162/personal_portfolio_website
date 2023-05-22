@@ -12,20 +12,19 @@ import {
   PopoverContent,
   useDisclosure,
   useColorModeValue,
+  Button,
 } from '@chakra-ui/react';
 // Here we have used react-icons package for the icons
 import { FaChevronDown } from 'react-icons/fa';
 import projectTags from './projectTags.js';
 // import { Link } from 'react-router-dom';
+import { Link as RouterLink } from 'react-router-dom';
 
 const MenuContainer = () => {
   return (
     <Flex
-      // w="full"
-      // h="280px"
       justifyContent={{ base: 'flex-start', sm: 'center' }}
       alignItems="flex-start"
-      // p={{ base: 5, sm: 10 }}
     >
       <DropDownMenu projectTags={projectTags} />
     </Flex>
@@ -48,13 +47,6 @@ const DropDownMenu = ({ projectTags }) => {
         <PopoverTrigger>
           <HStack alignItems="center" cursor="pointer" role="group">
             <Link
-              // p={2}
-              // fontSize={{ sm: 'md', md: 'lg' }}
-              // fontWeight="bold"
-              // color={useColorModeValue('gray.600', 'gray.200')}
-              // _groupHover={{
-              //   color: linkColor,
-              // }}
               _hover={{
                 textDecor: 'none',
               }}
@@ -83,7 +75,6 @@ const DropDownMenu = ({ projectTags }) => {
           bg={useColorModeValue('white', 'gray.800')}
           p={4}
           rounded="lg"
-          // minW="xs"
           maxW={'170px'}
         >
           <Flex flexDir={'column'}>
@@ -110,22 +101,15 @@ const DropDownMenu = ({ projectTags }) => {
 
 const DropDownItem = ({ linkColor, href, tag }) => {
   return (
-    <Link
-      href={href}
-      p={2}
-      rounded="md"
-      _hover={{
-        bg: useColorModeValue('gray.100', 'gray.900'),
-        color: linkColor,
-      }}
-      maxW={'150px'}
-    >
-      <Stack direction="row" align="center">
-        <Box>
-          <Text fontWeight={400}>{tag}</Text>
-        </Box>
-      </Stack>
-    </Link>
+    <Button variant="ghost" justifyContent={'left'}>
+      <RouterLink to={href}>
+        <Stack direction="row" align="center">
+          <Box _hover={{ backgroundColor: 'grey.100' }}>
+            <Text fontWeight={400}>{tag}</Text>
+          </Box>
+        </Stack>
+      </RouterLink>
+    </Button>
   );
 };
 
