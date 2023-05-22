@@ -10,16 +10,10 @@ let options = projectTags.map((tag) => {
 export default function ComboBox(props) {
   const { text, setText, tagSelect, setTagSelect } = props;
   const handleInputChange = (e, inputValue) => {
-    console.log({ inputValue: text });
-    console.log('inputValue', inputValue);
     setText(inputValue);
-    console.log({ value: text });
   };
   const handleChange = (e, value) => {
-    console.log({ value });
-    console.log({ tag: tagSelect });
     setTagSelect(value ? value.label : 'All');
-    console.log({ tag: tagSelect });
   };
   return (
     <Autocomplete
