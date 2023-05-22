@@ -84,19 +84,9 @@ const DropDownMenu = ({ projectTags }) => {
           maxW={'170px'}
         >
           <Flex flexDir={'column'}>
-            <DropDownItem
-              key={'all'}
-              linkColor={linkColor}
-              href={'/projects'}
-              tag="All Projects"
-            />
+            <DropDownItem key={'all'} href={'/projects'} tag="All Projects" />
             {projectTags.map((tag, index) => (
-              <DropDownItem
-                key={index}
-                linkColor={linkColor}
-                href={`/projects/${tag}`}
-                tag={tag}
-              />
+              <DropDownItem key={index} href={`/projects/${tag}`} tag={tag} />
             ))}
           </Flex>
         </PopoverContent>
@@ -105,22 +95,15 @@ const DropDownMenu = ({ projectTags }) => {
   );
 };
 
-const DropDownItem = ({ linkColor, href, tag }) => {
+const DropDownItem = ({ href, tag }) => {
   return (
     <Button variant="ghost" justifyContent={'left'}>
       <RouterLink to={href}>
-        {/* <Container */}
-        {/* p={2} */}
-        {/* _groupHover={{ color: linkColor, backgroundColor: 'grey.100' }} */}
-        {/* > */}
-        {/* <Link variant="ghost" justifyContent={'left'}> */}
         <Stack direction="row" align="center">
           <Box _hover={{ backgroundColor: 'grey.100' }}>
             <Text fontWeight={400}>{tag}</Text>
           </Box>
         </Stack>
-        {/* </Link> */}
-        {/* </Container> */}
       </RouterLink>
     </Button>
   );
