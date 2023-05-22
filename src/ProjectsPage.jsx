@@ -26,7 +26,7 @@ export default function ProjectsPage() {
           </ProjectHeroCard>
         </Container>
       </Flex>
-      <BlogCards title={'Projects'} count={projects.length} skip={0} />
+      <BlogCards title={'Projects'} count={projects.length} skip={0} interactive={ true } />
     </>
   );
 }

@@ -326,7 +326,7 @@ const projects = [
     content:
       "It can transcribe the user's voice and input it into the chat. The response will be provided by the OpenAI GPT-3.5 chat completion model.",
     tags: [
-      'openAI',
+      'OpenAI',
       'GPT3.5',
       'Chakra UI',
       'Material UI',

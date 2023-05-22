@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Box,
   SimpleGrid,
@@ -8,6 +8,8 @@ import {
   Heading,
   Tag,
   HStack,
+  Select,
+  Flex,
 } from '@chakra-ui/react';
 import projects from './projectInfoArray.js';
 import RiseAnimation from './RiseAnimation.jsx';
@@ -21,11 +23,43 @@ function truncateBlogTitle(title, limit) {
   }
 }
 
+function getUniqueTags(projects) {
+  const tagsSet = new Set();
+
+  projects.forEach((project) => {
+    project.tags.forEach((tag) => {
+      tagsSet.add(tag);
+    });
+  });
+
+  return Array.from(tagsSet);
+}
 const BlogCards = (props) => {
-  const { title, count, skip } = props;
+  const { title, count, skip, interactive } = props;
+  const [tagSelect, setTagSelect] = useState('All');
+  const handleSelectTag = (e) => {
+    setTagSelect(e.target.value);
+    console.log(e.target.value);
+  };
+  const tags = getUniqueTags(projects);
   return (
     <Container maxWidth="1200px" mx="auto" my="auto" p={{ base: 5, md: 10 }}>
       <Heading py={'3'}>{title}</Heading>
+      {interactive && (
+        <Box>
+          <Flex flexDir={'row'}>
+            <Heading as={'h3'} fontSize={15}>
+              <Text>Select Tag:</Text>
+            </Heading>
+            <Select value={tagSelect} onChange={handleSelectTag}>
+              <option>All</option>
+              {tags.map((tag, index) => {
+                return <option key={index}>{tag}</option>;
+              })}
+            </Select>
+          </Flex>
+        </Box>
+      )}
       <SimpleGrid columns={[1, 2, 3]} spacing="15px">
         {projects.slice(skip, count + skip).map((blog) => {
           return (

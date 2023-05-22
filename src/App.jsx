@@ -7,7 +7,7 @@ function App() {
   return (
     <div>
       <CallToActionWithVideo />
-      <BlogCards title={'Projects'} count={6} skip={0} />
+      <BlogCards title={'Projects'} count={6} skip={0} interactive={false} />
       <Box
         display={'flex'}
         maxW="1200px"
@@ -17,7 +17,7 @@ function App() {
         paddingBottom={5}
         justifyContent="right"
       >
-          <HoverAnimationButton />
+        <HoverAnimationButton />
       </Box>
     </div>
   );
