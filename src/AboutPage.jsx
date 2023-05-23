@@ -2,6 +2,7 @@ import { Heading, Text, Image, Box } from '@chakra-ui/react';
 import PageContainer from './PageContainer';
 import myPhoto from './assets/my_photo_about.jpg';
 import StandardLink from './StandardLink';
+import ImageWithPlaceholder from './ImageWithPlaceholder';
 
 export default function AboutPage() {
   return (
@@ -14,7 +15,7 @@ export default function AboutPage() {
         float={{ base: 'none', md: 'left' }}
         pr={50}
       >
-        <Image src={myPhoto} borderRadius={9} loading="lazy" />
+        <ImageWithPlaceholder src={myPhoto} borderRadius={9} loading="lazy" />
       </Box>
       <Text fontSize={'lg'}>
         I am Sathish Kannan. I recently graduated from 🎓IIT Bombay. I am a self

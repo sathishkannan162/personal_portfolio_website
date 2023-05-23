@@ -17,6 +17,8 @@ import RiseAnimation from './RiseAnimation.jsx';
 import projectTags from './projectTags.js';
 import ComboBox from './AutoCompleteMui.jsx';
 import { ThemeProvider, createTheme } from '@mui/material';
+import placeholderImg from './assets/website_logo.png';
+import ImageWithPlaceholder from './ImageWithPlaceholder.jsx';
 
 const muiTheme = createTheme();
 
@@ -91,7 +93,7 @@ const BlogCards = (props) => {
                       _hover={{ shadow: 'md' }}
                     >
                       <Box maxH="160px" p={4} overflow="hidden">
-                        <Image
+                        <ImageWithPlaceholder
                           src={blog.thumbnail}
                           overflow="clip"
                           mx="auto"

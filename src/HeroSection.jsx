@@ -10,6 +10,7 @@ import {
 import HeroImage from './assets/my_photo.jpg';
 import RiseAnimation from './RiseAnimation';
 import { motion } from 'framer-motion';
+import ImageWithPlaceholder from './ImageWithPlaceholder';
 
 export default function CallToActionWithVideo() {
   return (
@@ -35,7 +36,7 @@ export default function CallToActionWithVideo() {
                 maxWidth={'500px'}
                 overflow={'clip'}
               >
-                <Image
+                <ImageWithPlaceholder
                   alt={'Hero Image'}
                   fit={'cover'}
                   align={'center'}
