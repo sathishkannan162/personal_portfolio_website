@@ -72,6 +72,12 @@ const Navbar = () => {
               </Button>
               <MenuContainer closeMenu={() => {}} />
               <Button variant="ghost">
+                <Link to="/timeline">⏱️Timeline</Link>
+              </Button>
+              <Button variant="ghost">
+                <Link to="/Certifications">🎓Certifications</Link>
+              </Button>
+              <Button variant="ghost">
                 <Link to="/about">✨About Me</Link>
               </Button>
               <Button variant="ghost">

@@ -8,6 +8,8 @@ import ProjectsPage from './ProjectsPage.jsx';
 import ContactPage from './ContactPage.jsx';
 import AboutPage from './AboutPage.jsx';
 import ProjectsByTags from './ProjectsByTags.jsx';
+import Timeline from './Timeline.jsx';
+import Certifications from './Certifications.jsx';
 
 const router = createBrowserRouter([
   {
@@ -31,6 +33,14 @@ const router = createBrowserRouter([
       {
         path: '/projects/:tag',
         element: <ProjectsByTags />,
+      },
+      {
+        path: '/timeline',
+        element: <Timeline />,
+      },
+      {
+        path: '/certifications',
+        element: <Certifications />,
       },
     ],
   },

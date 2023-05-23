@@ -120,7 +120,7 @@ export default function CallToActionWithVideo() {
                   I am a web developer🧑‍💻 from India. I recently graduated with
                   Masters from{' '}
                   <Text as={'span'} color={'blackAlpha.800'}>
-                    IIT Bombay🎓
+                    IIT Bombay🏫
                   </Text>
                   . On this site, you can explore my web wonders🚀. I build full
                   stack web applications with{' '}
