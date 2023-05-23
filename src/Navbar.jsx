@@ -47,7 +47,12 @@ const Navbar = () => {
               <VisuallyHidden>Sathish Kannan</VisuallyHidden>
             </Link>
             <Link to="/">
-              <chakra.h1 fontSize="xl" fontWeight="medium" ml="2">
+              <chakra.h1
+                fontSize="xl"
+                fontWeight="medium"
+                ml="2"
+                _hover={{ color: 'gray.600' }}
+              >
                 Sathish Kannan
               </chakra.h1>
             </Link>

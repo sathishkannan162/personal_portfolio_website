@@ -1,12 +1,4 @@
-import {
-  Container,
-  Stack,
-  Flex,
-  Box,
-  Heading,
-  Text,
-  Image,
-} from '@chakra-ui/react';
+import { Container, Stack, Flex, Box, Heading, Text } from '@chakra-ui/react';
 import HeroImage from './assets/my_photo.jpg';
 import RiseAnimation from './RiseAnimation';
 import { motion } from 'framer-motion';
@@ -36,16 +28,22 @@ export default function CallToActionWithVideo() {
                 maxWidth={'500px'}
                 overflow={'clip'}
               >
-                <ImageWithPlaceholder
-                  alt={'Hero Image'}
-                  fit={'cover'}
-                  align={'center'}
-                  w={'100%'}
-                  h={'100%'}
-                  src={HeroImage}
-                  borderRadius={10}
-                  loading="lazy"
-                />
+                <motion.div
+                  initial={{ opacity: 0, translateX: '-100%' }}
+                  animate={{ opacity: 1, translateX: 0 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <ImageWithPlaceholder
+                    alt={'Hero Image'}
+                    fit={'cover'}
+                    align={'center'}
+                    w={'100%'}
+                    h={'100%'}
+                    src={HeroImage}
+                    borderRadius={10}
+                    loading="lazy"
+                  />
+                </motion.div>
               </Box>
             </RiseAnimation>
           </Flex>
@@ -84,6 +82,8 @@ export default function CallToActionWithVideo() {
                   bottom={-2}
                 />
                 <motion.span
+                  initial={{ opacity: 0, translateX: '100%' }}
+                  animate={{ opacity: 1, translateX: 0 }}
                   whileHover={{ translateY: -10 }}
                   transition={{ duration: 0.5 }}
                   style={{

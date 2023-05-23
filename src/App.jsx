@@ -2,6 +2,7 @@ import CallToActionWithVideo from './HeroSection';
 import BlogCards from './BlogList';
 import { Box } from '@chakra-ui/react';
 import HoverAnimationButton from './HoverAnimationButton';
+import { FaArrowRight } from 'react-icons/fa';
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
         paddingBottom={5}
         justifyContent="right"
       >
-        <HoverAnimationButton />
+        <HoverAnimationButton text="All projects" Icon={FaArrowRight} />
       </Box>
     </div>
   );

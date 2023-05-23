@@ -3,22 +3,19 @@ import {
   Box,
   SimpleGrid,
   Container,
-  Image,
   Text,
   Heading,
   Tag,
   HStack,
-  Select,
   Flex,
   Spacer,
 } from '@chakra-ui/react';
 import projects from './projectInfoArray.js';
 import RiseAnimation from './RiseAnimation.jsx';
-import projectTags from './projectTags.js';
 import ComboBox from './AutoCompleteMui.jsx';
 import { ThemeProvider, createTheme } from '@mui/material';
-import placeholderImg from './assets/website_logo.png';
 import ImageWithPlaceholder from './ImageWithPlaceholder.jsx';
+import { motion } from 'framer-motion';
 
 const muiTheme = createTheme();
 
@@ -75,70 +72,77 @@ const BlogCards = (props) => {
           .slice(skip, count ? count + skip : undefined)
           .map((blog) => {
             return (
-              <Box position="relative" key={blog.projectID}>
-                <RiseAnimation>
-                  <Box
-                    fontSize="sm"
-                    position="absolute"
-                    right="5px"
-                    margin="5px"
-                    zIndex="1"
-                  ></Box>
-                  <a href={blog.link} target="_blank">
+              <motion.div
+                initial={{ opacity: 0, translateY: '10px' }}
+                whileInView={{ opacity: 1, translateY: 0 }}
+                transition={{ duration: 0.5 }}
+                key={blog.projectID}
+              >
+                <Box position="relative">
+                  <RiseAnimation>
                     <Box
-                      borderWidth="1px"
-                      rounded="lg"
-                      overflow="hidden"
-                      position="relative"
-                      _hover={{ shadow: 'md' }}
-                    >
-                      <Box maxH="160px" p={4} overflow="hidden">
-                        <ImageWithPlaceholder
-                          src={blog.thumbnail}
-                          overflow="clip"
-                          mx="auto"
-                          alt="Blog image"
-                          loading="lazy"
-                        />
-                      </Box>
-                      <Box px={{ base: 4, lg: 6 }}>
-                        <Box d="flex" alignItems="baseline">
-                          <Box
-                            fontWeight="semibold"
-                            as="h2"
-                            letterSpacing="wide"
-                            textTransform="uppercase"
-                          >
-                            {truncateBlogTitle(blog.title, 30)}
+                      fontSize="sm"
+                      position="absolute"
+                      right="5px"
+                      margin="5px"
+                      zIndex="1"
+                    ></Box>
+                    <a href={blog.link} target="_blank">
+                      <Box
+                        borderWidth="1px"
+                        rounded="lg"
+                        overflow="hidden"
+                        position="relative"
+                        _hover={{ shadow: 'md' }}
+                      >
+                        <Box maxH="160px" p={4} overflow="hidden">
+                          <ImageWithPlaceholder
+                            src={blog.thumbnail}
+                            overflow="clip"
+                            mx="auto"
+                            alt="Blog image"
+                            loading="lazy"
+                          />
+                        </Box>
+                        <Box px={{ base: 4, lg: 6 }}>
+                          <Box d="flex" alignItems="baseline">
+                            <Box
+                              fontWeight="semibold"
+                              as="h2"
+                              letterSpacing="wide"
+                              textTransform="uppercase"
+                            >
+                              {truncateBlogTitle(blog.title, 30)}
+                            </Box>
                           </Box>
+                          <Box>
+                            <Box color="gray.600" fontSize="sm"></Box>
+                          </Box>
+                          <Text
+                            mt="1"
+                            fontWeight="semibold"
+                            noOfLines={3}
+                            lineHeight="tight"
+                            color="gray.600"
+                            fontSize="sm"
+                          >
+                            {blog.content}
+                          </Text>
+                          <HStack py={2}>
+                            {blog.tags.slice(0, 3).map((tag, index) => {
+                              return (
+                                <Tag key={index} colorScheme={'teal'}>
+                                  <Text fontSize={12}>{tag}</Text>
+                                </Tag>
+                              );
+                            })}
+                          </HStack>
                         </Box>
-                        <Box>
-                          <Box color="gray.600" fontSize="sm"></Box>
-                        </Box>
-                        <Text
-                          mt="1"
-                          fontWeight="semibold"
-                          noOfLines={3}
-                          lineHeight="tight"
-                          color="gray.600"
-                          fontSize="sm"
-                        >
-                          {blog.content}
-                        </Text>
-                        <HStack py={2}>
-                          {blog.tags.slice(0, 3).map((tag, index) => {
-                            return (
-                              <Tag key={index} colorScheme={'teal'}>
-                                <Text fontSize={12}>{tag}</Text>
-                              </Tag>
-                            );
-                          })}
-                        </HStack>
                       </Box>
-                    </Box>
-                  </a>
-                </RiseAnimation>
-              </Box>
+                    </a>
+                  </RiseAnimation>
+                </Box>
+              </motion.div>
             );
           })}
       </SimpleGrid>
