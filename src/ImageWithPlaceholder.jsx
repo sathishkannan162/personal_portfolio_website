@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Image } from '@chakra-ui/react';
-import placeholder from './assets/placeholder_square.png';
+import placeholder from './assets/placeholder_square.webp';
 
 function ImageWithPlaceholder({ src, ...props }) {
   const [imageSrc, setImageSrc] = useState(placeholder);
