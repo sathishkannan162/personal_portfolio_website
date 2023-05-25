@@ -1,10 +1,9 @@
-import ImageWithPlaceholder from './ImageWithPlaceholder';
-import { Box, Image, Text, Flex, Spacer, Heading } from '@chakra-ui/react';
-import certificateImage1 from './assets/certificates/certificate_1.png';
+import { Box, Text, Heading, Link, Image } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-export default function CertificateCard() {
-  const imageUrl = certificateImage1;
+import placeholder_square from './assets/placeholder_square.webp';
+
+export default function CertificateCard({ certificate }) {
   const [hover, setHover] = useState(false);
 
   const handleHover = () => {
@@ -12,32 +11,52 @@ export default function CertificateCard() {
   };
 
   return (
-    <Flex>
-      <motion.div onHoverStart={handleHover} onHoverEnd={handleHover}>
-        <Box
-          maxW="500px"
-          maxH="500px"
-          minW="300px"
-          aspectRatio={2.6 / 2}
-          backgroundImage={imageUrl}
-          backgroundSize="cover"
-        >
-          {/* <ImageWithPlaceholder src={imageUrl} /> */}
-          {/* <Flex flexDir={'column-reverse'}> */}
-          <Box h={'70%'} />
-          <Box opacity={hover ? 0.9 : 0} backgroundColor={'white'} h="30%">
-            <Heading color={'black'} lineHeight={7}>
-              <Text as="h3" fontWeight={500} fontSize="md" textAlign={'center'}>
-                Responsive Web Design Certification
-              </Text>
-              <Text textAlign={'center'} fontWeight={400} fontSize={'sm'}>
-                FreeCodeCamp
-              </Text>
-            </Heading>
+    <Box>
+      <Heading fontSize={'xl'} py={4} px={1}>
+        {certificate.name}
+      </Heading>
+      <motion.div
+        whileHover={{ scale: 1.1 }}
+        onHoverStart={handleHover}
+        onHoverEnd={handleHover}
+        transition={{ duration: 0.2 }}
+      >
+        <Link href={certificate.certificateUrl} target="_blank">
+          <Box
+            maxW="500px"
+            maxH="500px"
+            minW={{ base: '150px', sm: '250px', md: '350px' }}
+            aspectRatio={1.5 / 1}
+            backgroundImage={certificate.imageUrl}
+            backgroundSize="cover"
+          >
+            <Box h={'80%'} w="100%">
+              <Image src={placeholder_square} opacity={0} />
+            </Box>
+            <motion.div whileHover={{ scale: 1.1 }}>
+              <Box
+                opacity={{ base: 1, sm: hover ? 0 : 0.9 }}
+                backgroundColor={'gray.200'}
+                h="20%"
+                outline="2px solid"
+                mx="auto"
+              >
+                <Heading color={'black'} lineHeight={7}>
+                  <Text fontWeight={800} fontSize={'lg'} textAlign={'center'}>
+                    {certificate.name}
+                  </Text>
+                  <Text textAlign={'center'} fontWeight={600} fontSize={'sm'}>
+                    {certificate.provider}
+                  </Text>
+                  <Text textAlign={'center'} fontWeight={600} fontSize={'sm'}>
+                    Click Card to View
+                  </Text>
+                </Heading>
+              </Box>
+            </motion.div>
           </Box>
-          {/* </Flex> */}
-        </Box>
+        </Link>
       </motion.div>
-    </Flex>
+    </Box>
   );
 }
