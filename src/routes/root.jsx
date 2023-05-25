@@ -6,23 +6,15 @@ import { ScrollRestoration } from 'react-router-dom';
 
 const customTheme = extendTheme({
   fonts: {
-    body: 'Roboto,sans-serif',
-    heading: 'poppins, serif',
+    body: 'Lato,sans-serif',
+    heading: 'Lato, serif',
   },
-  // styles: {
-  //   global: {
-  //     body: {
-  //       backgroundColor: "#f8fafc"
-  //     },
-  //   },
-  // },
 });
 
 export default function Root() {
   return (
     <>
       <ChakraProvider theme={customTheme}>
-        {/* <ChakraProvider> */}
         <ScrollRestoration />
         <Navbar />
         <Outlet />
