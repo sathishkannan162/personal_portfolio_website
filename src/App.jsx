@@ -1,7 +1,7 @@
 import CallToActionWithVideo from './HeroSection';
 import BlogCards from './BlogList';
-import { Box } from '@chakra-ui/react';
 import HoverAnimationButton from './HoverAnimationButton';
+import { Box } from '@chakra-ui/react';
 import { FaArrowRight } from 'react-icons/fa';
 
 function App() {

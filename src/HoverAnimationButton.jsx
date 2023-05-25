@@ -5,22 +5,15 @@ import { Link } from 'react-router-dom';
 
 const HoverAnimationButton = (props) => {
   const { text, Icon } = props;
-  const [isHovered, setIsHovered] = useState(false);
-
-  const handleHover = () => {
-    setIsHovered(!isHovered);
-  };
-
   return (
     <motion.div
-      onHoverStart={handleHover}
-      onHoverEnd={handleHover}
+      whileHover={{ scale: 1.05 }}
       whileInView={{ rotateZ: [2, -2, 2, -2, 0] }}
       transition={{ duration: 0.5 }}
+      style={{ margin: 'auto' }}
     >
-      <Button colorScheme="blue">
+      <Button colorScheme="blue" rightIcon={<Icon />}>
         <Link to="/projects">{text}</Link>
-        {isHovered && <Icon style={{ marginLeft: '4px' }} />}
       </Button>
     </motion.div>
   );
