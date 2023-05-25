@@ -1,7 +1,14 @@
-export default function () {
+import { Heading, SimpleGrid } from '@chakra-ui/react';
+import CertificateCard from './CertificateCard';
+import PageContainer from './PageContainer';
+
+export default function Certifications() {
   return (
-    <div>
-      <h1>Certifications</h1>
-    </div>
+    <PageContainer>
+      <Heading>Certifications</Heading>
+      <SimpleGrid py={4} columns={[1, 2, 3]} spacing="15px">
+        <CertificateCard />
+      </SimpleGrid>
+    </PageContainer>
   );
 }
