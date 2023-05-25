@@ -19,6 +19,7 @@ export default function CertificateCard({ certificate }) {
         whileHover={{ scale: 1.1 }}
         onHoverStart={handleHover}
         onHoverEnd={handleHover}
+        whileTap={{ scale: 0.9 }}
         transition={{ duration: 0.2 }}
       >
         <Link href={certificate.certificateUrl} target="_blank">
