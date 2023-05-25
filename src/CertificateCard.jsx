@@ -17,6 +17,9 @@ export default function CertificateCard({ certificate }) {
       </Heading>
       <motion.div
         whileHover={{ scale: 1.1 }}
+        initial={{ opacity: 0, translateY: '20px' }}
+        whileInView={{ opacity: 1, translateY: 0 }}
+        viewport={{ once: true }}
         onHoverStart={handleHover}
         onHoverEnd={handleHover}
         whileTap={{ scale: 0.9 }}
