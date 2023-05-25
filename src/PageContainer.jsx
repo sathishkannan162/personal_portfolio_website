@@ -4,7 +4,7 @@ export default function PageContainer({ children }) {
   return (
     <Box
       maxW="1000px"
-      minH={{ base: 'auto', md: '70vh' }}
+      minH={{ base: 'auto', md: '80vh' }}
       mx="auto"
       my="30px"
       px="20px"
