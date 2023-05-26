@@ -1,8 +1,8 @@
 import { Container, Stack, Flex, Box, Heading, Text } from '@chakra-ui/react';
-import HeroImage from './assets/my_photo.jpg';
-import RiseAnimation from './RiseAnimation';
+import HeroImage from '../../assets/my_photo.jpg';
+import RiseAnimation from '../CommonComponents/RiseAnimation';
 import { motion } from 'framer-motion';
-import ImageWithPlaceholder from './ImageWithPlaceholder';
+import ImageWithPlaceholder from '../CommonComponents/ImageWithPlaceholder';
 
 export default function CallToActionWithVideo() {
   return (

@@ -1,6 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import { useParams } from 'react-router-dom';
-import ProjectList from './ProjectList';
+import ProjectList from '../ProjectsPage/ProjectList';
 
 export default function ProjectsByTags() {
   const { tag } = useParams();

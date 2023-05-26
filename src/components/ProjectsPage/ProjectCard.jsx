@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
-import RiseAnimation from './RiseAnimation';
+import RiseAnimation from '../CommonComponents/RiseAnimation';
 import { Box, Tag, HStack, Text } from '@chakra-ui/react';
-import truncateBlogTitle from './Projects/helpers/truncateBlogTitle.js';
-import ImageWithPlaceholder from './ImageWithPlaceholder';
+import truncateBlogTitle from './helpers/truncateBlogTitle.js';
+import ImageWithPlaceholder from '../CommonComponents/ImageWithPlaceholder';
 
 export default function ProjectCard({ project }) {
   return (

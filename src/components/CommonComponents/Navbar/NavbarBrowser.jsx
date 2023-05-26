@@ -14,8 +14,12 @@ export default function NavbarBrowser() {
     >
       <NavbarLinkButtonBrowser to="/">🏠Home</NavbarLinkButtonBrowser>
       <MenuContainer closeMenu={() => {}} />
-      <NavbarLinkButtonBrowser to="/milestones">💎Milestones</NavbarLinkButtonBrowser>
-      <NavbarLinkButtonBrowser to="/certifications">🎓Certifications</NavbarLinkButtonBrowser>
+      <NavbarLinkButtonBrowser to="/milestones">
+        💎Milestones
+      </NavbarLinkButtonBrowser>
+      <NavbarLinkButtonBrowser to="/certifications">
+        🎓Certifications
+      </NavbarLinkButtonBrowser>
       <NavbarLinkButtonBrowser to="/about">✨About </NavbarLinkButtonBrowser>
       <NavbarLinkButtonBrowser to="/contact">📞Contact</NavbarLinkButtonBrowser>
     </HStack>

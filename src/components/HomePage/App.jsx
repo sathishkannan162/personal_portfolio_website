@@ -1,5 +1,5 @@
 import CallToActionWithVideo from './HeroSection';
-import ProjectList from './ProjectList';
+import ProjectList from '../ProjectsPage/ProjectList';
 import AllProjectsAnimateButton from './AllProjectsAnimateButton';
 import { Box } from '@chakra-ui/react';
 import { FaArrowRight } from 'react-icons/fa';

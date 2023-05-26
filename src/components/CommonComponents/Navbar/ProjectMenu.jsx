@@ -13,7 +13,7 @@ import {
   Wrap,
 } from '@chakra-ui/react';
 import { FaChevronDown } from 'react-icons/fa';
-import projectTags from './data/projectTags.js';
+import projectTags from '../../../data/projectTags.js';
 import DropDownItem from './ProjectMenuDropDownItem.jsx';
 
 const ProjectMenuContainer = ({ closeMenu }) => {

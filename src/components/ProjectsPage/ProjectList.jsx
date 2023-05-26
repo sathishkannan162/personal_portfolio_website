@@ -8,9 +8,9 @@ import {
   Flex,
   Spacer,
 } from '@chakra-ui/react';
-import projects from './data/projectInfoArray.js';
+import projects from '../../data/projectInfoArray.js';
 import ComboBox from './AutoCompleteMui.jsx';
-import filterProjectsByTag from './Projects/helpers/filterProjectsByTags.js';
+import filterProjectsByTag from './helpers/filterProjectsByTags.js';
 import ProjectCard from './ProjectCard.jsx';
 
 const ProjectList = (props) => {
