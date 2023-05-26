@@ -1,8 +1,7 @@
 import { motion } from 'framer-motion';
 import RiseAnimation from '../CommonComponents/RiseAnimation';
-import { Box, Tag, HStack, Text } from '@chakra-ui/react';
+import { Box, Image, Tag, HStack, Text } from '@chakra-ui/react';
 import truncateBlogTitle from './helpers/truncateBlogTitle.js';
-import ImageWithPlaceholder from '../CommonComponents/ImageWithPlaceholder';
 
 export default function ProjectCard({ project }) {
   return (
@@ -33,12 +32,14 @@ export default function ProjectCard({ project }) {
             >
               {/* project thumbnail */}
               <Box maxH="160px" p={4} overflow="hidden">
-                <ImageWithPlaceholder
+                <Image
                   src={project.thumbnail}
                   overflow="clip"
                   mx="auto"
                   alt="Blog image"
                   loading="lazy"
+                  w="300px"
+                  aspectRatio={1.9 / 1}
                 />
               </Box>
               <Box px={{ base: 4, lg: 6 }}>

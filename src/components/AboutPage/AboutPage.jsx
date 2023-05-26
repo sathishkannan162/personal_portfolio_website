@@ -1,7 +1,6 @@
 import { Heading, Text, Image, Box } from '@chakra-ui/react';
 import PageContainer from '../CommonComponents/PageContainer';
 import StandardLink from '../CommonComponents/StandardLink';
-import ImageWithPlaceholder from '../CommonComponents/ImageWithPlaceholder';
 
 export default function AboutPage() {
   const myPhoto =
@@ -18,7 +17,13 @@ export default function AboutPage() {
         pr={{ base: 0, md: 50 }}
         pl={{ base: 0, md: 0 }}
       >
-        <Image mx="auto" src={myPhoto} borderRadius={9} />
+        <Image
+          w={{ base: '300px', md: '350px' }}
+          h={{ base: '300px', md: '350px' }}
+          mx="auto"
+          src={myPhoto}
+          borderRadius={9}
+        />
       </Box>
       <Box pt={{ base: 5, md: 0 }}>
         <Text fontSize={'lg'}>

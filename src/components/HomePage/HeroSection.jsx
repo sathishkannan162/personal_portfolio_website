@@ -46,6 +46,8 @@ export default function CallToActionWithVideo() {
                     align="center"
                     src={HeroImage}
                     borderRadius={10}
+                    w={{ base: '300px', sm: '400px', md: '500px' }}
+                    h={{ base: '300px', sm: '400px', md: '500px' }}
                   />
                 </motion.div>
               </Box>
