@@ -1,6 +1,6 @@
-import { Heading, Text, Container, Box } from '@chakra-ui/react';
-import PageContainer from './PageContainer';
-import StandardLink from './StandardLink';
+import { Heading, Text, Box } from '@chakra-ui/react';
+import PageContainer from '../CommonComponents/PageContainer';
+import StandardLink from '../CommonComponents/StandardLink';
 
 export default function ContactPage() {
   return (

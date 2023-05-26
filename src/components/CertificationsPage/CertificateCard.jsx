@@ -1,7 +1,7 @@
 import { Box, Text, Heading, Link, Image } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import placeholder_square from './assets/placeholder_square.webp';
+import placeholder_square from '../../assets/placeholder_square.webp';
 
 export default function CertificateCard({ certificate }) {
   const [hover, setHover] = useState(false);
@@ -52,7 +52,7 @@ export default function CertificateCard({ certificate }) {
                   <Text textAlign={'center'} fontWeight={600} fontSize={'sm'}>
                     {certificate.provider}
                   </Text>
-                  <Text textAlign={'center'} fontWeight={600} fontSize={'sm'}>
+                  <Text textAlign={'center'} fontWeight={600} fontSize={'xs'}>
                     Click Card to View
                   </Text>
                 </Heading>

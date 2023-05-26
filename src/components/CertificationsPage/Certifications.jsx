@@ -1,7 +1,7 @@
 import { Heading, SimpleGrid, Box } from '@chakra-ui/react';
 import CertificateCard from './CertificateCard';
-import PageContainer from './PageContainer';
-import certificationsInfoArray from './certificationsInfoArray.js';
+import PageContainer from '../CommonComponents/PageContainer';
+import certificationsInfoArray from '../../data/certificationsInfoArray.js';
 
 export default function Certifications() {
   return (

@@ -1,7 +1,7 @@
 import { Heading, Container, Flex } from '@chakra-ui/react';
-import BlogCards from './BlogList';
+import ProjectList from './ProjectList';
 import ProjectHeroCard from './ProjectHeroCard';
-import projects from './projectInfoArray.js';
+import projects from '../../data/projectInfoArray.js';
 
 let featured_projectID = 1; // last or important project is featured
 let featuredProject = projects[featured_projectID];
@@ -26,7 +26,7 @@ export default function ProjectsPage() {
           </ProjectHeroCard>
         </Container>
       </Flex>
-      <BlogCards
+      <ProjectList
         title={'Projects'}
         count={projects.length}
         skip={0}

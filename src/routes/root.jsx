@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
-import Navbar from '../Navbar';
-import Footer from '../Footer';
+import Navbar from '../components/CommonComponents/Navbar/Navbar';
+import Footer from '../components/CommonComponents/Footer/Footer';
 import { ScrollRestoration } from 'react-router-dom';
 
 const customTheme = extendTheme({

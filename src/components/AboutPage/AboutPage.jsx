@@ -1,10 +1,10 @@
 import { Heading, Text, Image, Box } from '@chakra-ui/react';
-import PageContainer from './PageContainer';
-import myPhoto from './assets/my_photo_about.jpg';
-import StandardLink from './StandardLink';
-import ImageWithPlaceholder from './ImageWithPlaceholder';
+import PageContainer from '../CommonComponents/PageContainer';
+import StandardLink from '../CommonComponents/StandardLink';
+import ImageWithPlaceholder from '../CommonComponents/ImageWithPlaceholder';
 
 export default function AboutPage() {
+const myPhoto = "https://projectimages.netlify.app/my_photos/my_photo_about.jpg"
   return (
     <PageContainer>
       <Heading>About Me</Heading>
