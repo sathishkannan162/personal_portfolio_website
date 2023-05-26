@@ -7,7 +7,6 @@ function getUniqueTags(projects) {
       tagsSet.add(tag);
     });
   });
-
   return Array.from(tagsSet);
 }
 
