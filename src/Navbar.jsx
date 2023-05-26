@@ -72,6 +72,12 @@ const Navbar = () => {
               </Button>
               <MenuContainer closeMenu={() => {}} />
               <Button variant="ghost">
+                <Link to="/timeline">💎Milestones</Link>
+              </Button>
+              <Button variant="ghost">
+                <Link to="/Certifications">🎓Certifications</Link>
+              </Button>
+              <Button variant="ghost">
                 <Link to="/about">✨About Me</Link>
               </Button>
               <Button variant="ghost">
@@ -126,6 +132,12 @@ const Navbar = () => {
                   <Link to="/">🏠Home</Link>
                 </Button>
                 <MenuContainer closeMenu={mobileNav.onClose} />
+                <Button onClick={mobileNav.onClose} w="full" variant="ghost">
+                  <Link to="/timeline">💎Milestones</Link>
+                </Button>
+                <Button onClick={mobileNav.onClose} w="full" variant="ghost">
+                  <Link to="/Certifications">🎓Certifications</Link>
+                </Button>
                 <Button onClick={mobileNav.onClose} w="full" variant="ghost">
                   <Link to="/about">✨About Me</Link>
                 </Button>
