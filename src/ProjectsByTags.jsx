@@ -1,12 +1,12 @@
 import { Box } from '@chakra-ui/react';
 import { useParams } from 'react-router-dom';
-import BlogCards from './BlogList';
+import ProjectList from './ProjectList';
 
 export default function ProjectsByTags() {
   const { tag } = useParams();
   return (
     <>
-      <BlogCards
+      <ProjectList
         title={`${tag} Projects`}
         skip={0}
         interactive={false}

@@ -9,7 +9,7 @@ export default function PageContainer({ children }) {
       my="30px"
       px="20px"
     >
-      {/* my default maxW was 1200px but reduced to 1000px here */}
+      {/* my default maxW was 1200px in other pages but reduced to 1000px here */}
       {children}
     </Box>
   );

@@ -4,21 +4,19 @@ import {
   Flex,
   Box,
   Popover,
-  Text,
   Icon,
   PopoverTrigger,
   PopoverContent,
   useDisclosure,
   useColorModeValue,
-  Button,
   Heading,
   Wrap,
 } from '@chakra-ui/react';
 import { FaChevronDown } from 'react-icons/fa';
 import projectTags from './projectTags.js';
-import { Link as RouterLink } from 'react-router-dom';
+import DropDownItem from './ProjectMenuDropDownItem.jsx';
 
-const MenuContainer = ({ closeMenu }) => {
+const ProjectMenuContainer = ({ closeMenu }) => {
   return (
     <Flex
       justifyContent={{ base: 'flex-start', sm: 'center' }}
@@ -101,18 +99,4 @@ const DropDownMenu = ({ projectTags, closeMenu }) => {
   );
 };
 
-const DropDownItem = ({ href, tag, closeMenu }) => {
-  return (
-    <Button variant="ghost" justifyContent={'left'} onClick={closeMenu}>
-      <RouterLink to={href}>
-        <Stack direction="row" align="center">
-          <Box _hover={{ backgroundColor: 'grey.100' }}>
-            <Text fontWeight={400}>{tag}</Text>
-          </Box>
-        </Stack>
-      </RouterLink>
-    </Button>
-  );
-};
-
-export default MenuContainer;
+export default ProjectMenuContainer;

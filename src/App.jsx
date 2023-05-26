@@ -1,6 +1,6 @@
 import CallToActionWithVideo from './HeroSection';
-import BlogCards from './BlogList';
-import HoverAnimationButton from './HoverAnimationButton';
+import ProjectList from './ProjectList';
+import AllProjectsAnimateButton from './AllProjectsAnimateButton';
 import { Box } from '@chakra-ui/react';
 import { FaArrowRight } from 'react-icons/fa';
 
@@ -8,7 +8,7 @@ function App() {
   return (
     <div>
       <CallToActionWithVideo />
-      <BlogCards title={'Projects'} count={6} skip={0} interactive={false} />
+      <ProjectList title={'Projects'} count={6} skip={0} interactive={false} />
       <Box
         display={'flex'}
         maxW="1200px"
@@ -18,7 +18,7 @@ function App() {
         paddingBottom={5}
         justifyContent="right"
       >
-        <HoverAnimationButton text="All projects" Icon={FaArrowRight} />
+        <AllProjectsAnimateButton text="All projects" Icon={FaArrowRight} />
       </Box>
     </div>
   );

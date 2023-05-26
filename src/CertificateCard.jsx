@@ -52,7 +52,7 @@ export default function CertificateCard({ certificate }) {
                   <Text textAlign={'center'} fontWeight={600} fontSize={'sm'}>
                     {certificate.provider}
                   </Text>
-                  <Text textAlign={'center'} fontWeight={600} fontSize={'sm'}>
+                  <Text textAlign={'center'} fontWeight={600} fontSize={'xs'}>
                     Click Card to View
                   </Text>
                 </Heading>

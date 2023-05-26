@@ -1,5 +1,5 @@
 import { Heading, Container, Flex } from '@chakra-ui/react';
-import BlogCards from './BlogList';
+import ProjectList from './ProjectList';
 import ProjectHeroCard from './ProjectHeroCard';
 import projects from './projectInfoArray.js';
 
@@ -26,7 +26,7 @@ export default function ProjectsPage() {
           </ProjectHeroCard>
         </Container>
       </Flex>
-      <BlogCards
+      <ProjectList
         title={'Projects'}
         count={projects.length}
         skip={0}
