@@ -4,24 +4,21 @@ import StandardLink from '../CommonComponents/StandardLink';
 import ImageWithPlaceholder from '../CommonComponents/ImageWithPlaceholder';
 
 export default function AboutPage() {
-const myPhoto = "https://projectimages.netlify.app/my_photos/my_photo_about.jpg"
+  const myPhoto =
+    'https://projectimages.netlify.app/my_photos/my_photo_about.jpg';
   return (
     <PageContainer>
       <Heading>About Me</Heading>
       <br />
       <Box
-        maxW="400px"
-        maxH="400px"
+        w={{ base: '300px', md: '400px' }}
+        h={{ base: '300px', md: '400px' }}
         mx="auto"
         float={{ base: 'none', md: 'left' }}
         pr={{ base: 0, md: 50 }}
         pl={{ base: 0, md: 0 }}
       >
-        <ImageWithPlaceholder
-          mx="auto"
-          src={myPhoto}
-          borderRadius={9}
-        />
+        <Image mx="auto" src={myPhoto} borderRadius={9} />
       </Box>
       <Box pt={{ base: 5, md: 0 }}>
         <Text fontSize={'lg'}>

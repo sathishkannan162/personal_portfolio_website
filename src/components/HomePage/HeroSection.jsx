@@ -1,10 +1,18 @@
-import { Container, Stack, Flex, Box, Heading, Text } from '@chakra-ui/react';
+import {
+  Container,
+  Stack,
+  Image,
+  Flex,
+  Box,
+  Heading,
+  Text,
+} from '@chakra-ui/react';
 import RiseAnimation from '../CommonComponents/RiseAnimation';
 import { motion } from 'framer-motion';
 import ImageWithPlaceholder from '../CommonComponents/ImageWithPlaceholder';
 
 export default function CallToActionWithVideo() {
-  const HeroImage = "https://projectimages.netlify.app/my_photos/my_photo.jpg";
+  const HeroImage = 'https://projectimages.netlify.app/my_photos/my_photo.jpg';
   return (
     <Flex width="full" backgroundColor="#f8fafc">
       <Container maxW={'1200px'}>
@@ -24,8 +32,8 @@ export default function CallToActionWithVideo() {
             <RiseAnimation>
               <Box
                 position={'relative'}
-                maxHeight={'500px'}
-                maxWidth={'500px'}
+                w={{ base: '300px', sm: '400px', md: '500px' }}
+                h={{ base: '300px', sm: '400px', md: '500px' }}
                 overflow={'clip'}
               >
                 <motion.div
@@ -33,12 +41,10 @@ export default function CallToActionWithVideo() {
                   animate={{ opacity: 1, translateX: 0 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <ImageWithPlaceholder
-                    alt={'Hero Image'}
-                    fit={'cover'}
-                    align={'center'}
-                    w={'100%'}
-                    h={'100%'}
+                  <Image
+                    alt="my-photo"
+                    fit="cover"
+                    align="center"
                     src={HeroImage}
                     borderRadius={10}
                   />
