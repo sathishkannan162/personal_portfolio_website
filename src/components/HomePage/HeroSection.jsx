@@ -1,10 +1,10 @@
 import { Container, Stack, Flex, Box, Heading, Text } from '@chakra-ui/react';
-import HeroImage from '../../assets/my_photo.jpg';
 import RiseAnimation from '../CommonComponents/RiseAnimation';
 import { motion } from 'framer-motion';
 import ImageWithPlaceholder from '../CommonComponents/ImageWithPlaceholder';
 
 export default function CallToActionWithVideo() {
+  const HeroImage = "https://projectimages.netlify.app/my_photos/my_photo.jpg";
   return (
     <Flex width="full" backgroundColor="#f8fafc">
       <Container maxW={'1200px'}>
