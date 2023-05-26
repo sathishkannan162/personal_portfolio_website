@@ -8,8 +8,8 @@ import ProjectsPage from './ProjectsPage.jsx';
 import ContactPage from './ContactPage.jsx';
 import AboutPage from './AboutPage.jsx';
 import ProjectsByTags from './ProjectsByTags.jsx';
-import Timeline from './Timeline.jsx';
 import Certifications from './Certifications.jsx';
+import TimelinePage from './TimelinePage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -36,7 +36,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/timeline',
-        element: <Timeline />,
+        element: <TimelinePage />,
       },
       {
         path: '/certifications',

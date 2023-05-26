@@ -72,7 +72,7 @@ const Navbar = () => {
               </Button>
               <MenuContainer closeMenu={() => {}} />
               <Button variant="ghost">
-                <Link to="/timeline">⏱️Timeline</Link>
+                <Link to="/timeline">💎Milestones</Link>
               </Button>
               <Button variant="ghost">
                 <Link to="/Certifications">🎓Certifications</Link>
@@ -133,7 +133,7 @@ const Navbar = () => {
                 </Button>
                 <MenuContainer closeMenu={mobileNav.onClose} />
                 <Button onClick={mobileNav.onClose} w="full" variant="ghost">
-                  <Link to="/timeline">⏱️Timeline</Link>
+                  <Link to="/timeline">💎Milestones</Link>
                 </Button>
                 <Button onClick={mobileNav.onClose} w="full" variant="ghost">
                   <Link to="/Certifications">🎓Certifications</Link>
