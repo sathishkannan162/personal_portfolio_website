@@ -1,11 +1,11 @@
-import { Flex, Avatar, VisuallyHidden, chakra } from '@chakra-ui/react';
+import { Flex, VisuallyHidden, chakra, Image } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 
 export default function LogoWithName({ Logo, Name }) {
   return (
     <Flex>
       <Link to="/">
-        <Avatar src={Logo} size="sm" alt="sathish kannan logo" />
+        <Image src={Logo} w="30px" h="30px" alt="Sathish kannan Logo" />
       </Link>
       <Link to="/">
         <VisuallyHidden>{Name}</VisuallyHidden>
