@@ -97,7 +97,7 @@ const TimelineTree = () => {
         Milestones
       </chakra.h3>
       {milestones.map((milestone) => (
-        <Flex key={milestone.id} mb="0px">
+        <Flex key={milestone.id} mb="10px">
           {/* Desktop view(left card) */}
           {isDesktop && milestone.id % 2 === 0 && (
             <>
@@ -147,12 +147,14 @@ const Card = ({ id, title, description, date }) => {
 
   const container = {
     hidden: {
+      scale: 0,
       opacity: 1,
-      translateX: isEvenId? '100%': "-100%"
+      translateY: "10px",
     },
     visible: {
+      scale: 1,
       opacity: 1,
-      translateX:0,
+      translateY: 0,
       transition: {
         delayChildren: 0.1,
         staggerChildren: 0.1,
@@ -170,11 +172,7 @@ const Card = ({ id, title, description, date }) => {
 
   return (
     <Box flex={1}>
-          <motion.div
-            initial="hidden"
-            whileInView="visible" 
-            variants={container}
-          >
+      <motion.div initial="hidden" whileInView="visible" variants={container}>
         <HStack
           flex={1}
           p={{ base: 3, sm: 6 }}
@@ -199,28 +197,28 @@ const Card = ({ id, title, description, date }) => {
             display: "block",
           }}
         >
-            <Box>
-              <motion.div variants={item}>
-                <Text fontSize="lg" color={isEvenId ? "teal.400" : "blue.400"}>
-                  {date}
-                </Text>
-              </motion.div>
+          <Box>
+            <motion.div variants={item}>
+              <Text fontSize="lg" color={isEvenId ? "teal.400" : "blue.400"}>
+                {date}
+              </Text>
+            </motion.div>
 
-              <VStack spacing={2} mb={3} textAlign="left">
-                <chakra.h1
-                  fontSize="2xl"
-                  lineHeight={1.2}
-                  textAlign="left"
-                  fontWeight="bold"
-                  w="100%"
-                >
-                  <motion.div variants={item}>{title}</motion.div>
-                </chakra.h1>
-                <motion.div variants={item}>
-                  <Text fontSize="md">{description}</Text>
-                </motion.div>
-              </VStack>
-            </Box>
+            <VStack spacing={2} mb={3} textAlign="left">
+              <chakra.h1
+                fontSize="2xl"
+                lineHeight={1.2}
+                textAlign="left"
+                fontWeight="bold"
+                w="100%"
+              >
+                <motion.div variants={item}>{title}</motion.div>
+              </chakra.h1>
+              <motion.div variants={item}>
+                <Text fontSize="md">{description}</Text>
+              </motion.div>
+            </VStack>
+          </Box>
         </HStack>
       </motion.div>
     </Box>
