@@ -56,7 +56,7 @@ export default function NavbarMobile({ bg }) {
           🏠Home
         </NavbarLinkButtonMobile>
         <ProjectMenuContainer closeMenu={mobileNav.onClose} />
-        <NavbarLinkButtonMobile onClick={mobileNav.onClose} to="/timeline">
+        <NavbarLinkButtonMobile onClick={mobileNav.onClose} to="/milestones">
           💎Milestones
         </NavbarLinkButtonMobile>
         <NavbarLinkButtonMobile
