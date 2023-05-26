@@ -1,7 +1,7 @@
 import React from 'react';
 import { chakra, Flex, useColorModeValue, HStack } from '@chakra-ui/react';
 import Logo from '../../../assets/website_logo.png';
-import LogoWithName from '../../HomePage/LogoWithName';
+import LogoWithName from './LogoWithName';
 import NavbarBrowser from './NavbarBrowser';
 import NavbarMobile from './NavbarMobile';
 

@@ -1,4 +1,5 @@
-import { Flex, Link, Avatar, VisuallyHidden, chakra } from '@chakra-ui/react';
+import { Flex, Avatar, VisuallyHidden, chakra } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
 
 export default function LogoWithName({ Logo, Name }) {
   return (
