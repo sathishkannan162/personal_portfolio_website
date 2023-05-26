@@ -5,7 +5,7 @@ export default function LogoWithName({ Logo, Name }) {
   return (
     <Flex>
       <Link to="/">
-        <Avatar src={Logo} size="sm" />
+        <Avatar src={Logo} size="sm" alt="sathish kannan logo" />
       </Link>
       <Link to="/">
         <VisuallyHidden>{Name}</VisuallyHidden>

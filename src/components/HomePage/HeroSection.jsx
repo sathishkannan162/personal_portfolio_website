@@ -9,7 +9,6 @@ import {
 } from '@chakra-ui/react';
 import RiseAnimation from '../CommonComponents/RiseAnimation';
 import { motion } from 'framer-motion';
-import ImageWithPlaceholder from '../CommonComponents/ImageWithPlaceholder';
 
 export default function CallToActionWithVideo() {
   const HeroImage = 'https://projectimages.netlify.app/my_photos/my_photo.jpg';
