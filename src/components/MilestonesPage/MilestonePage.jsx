@@ -1,10 +1,14 @@
 import PageContainer from '../CommonComponents/PageContainer';
 import MilestoneTree from './MilestoneTree';
+import TopScrollIndicator from './TopScrollIndicator';
 
 export default function MilestonePage() {
   return (
-    <PageContainer>
-      <MilestoneTree />
-    </PageContainer>
+    <>
+      <TopScrollIndicator />
+      <PageContainer>
+        <MilestoneTree />
+      </PageContainer>
+    </>
   );
 }
