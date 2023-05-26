@@ -21,7 +21,6 @@ const myPhoto = "https://projectimages.netlify.app/my_photos/my_photo_about.jpg"
           mx="auto"
           src={myPhoto}
           borderRadius={9}
-          loading="lazy"
         />
       </Box>
       <Box pt={{ base: 5, md: 0 }}>

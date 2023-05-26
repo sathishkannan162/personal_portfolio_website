@@ -41,7 +41,6 @@ export default function CallToActionWithVideo() {
                     h={'100%'}
                     src={HeroImage}
                     borderRadius={10}
-                    loading="lazy"
                   />
                 </motion.div>
               </Box>
