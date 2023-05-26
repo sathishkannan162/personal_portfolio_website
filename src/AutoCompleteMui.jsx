@@ -1,6 +1,6 @@
 import { TextField } from '@mui/material';
 import Autocomplete from '@mui/material/Autocomplete';
-import projectTags from './projectTags.js';
+import projectTags from './data/projectTags.js';
 import { ThemeProvider, createTheme } from '@mui/material';
 
 let options = projectTags.map((tag) => {
@@ -13,7 +13,7 @@ export default function ComboBox(props) {
   const handleInputChange = (_e, inputValue) => {
     setText(inputValue);
   };
-  const handleChange = (e, value) => {
+  const handleChange = (_e, value) => {
     setTagSelect(value ? value.label : 'All');
   };
   return (

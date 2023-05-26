@@ -1,5 +1,5 @@
 import { chakra, Container, Flex, useBreakpointValue } from '@chakra-ui/react';
-import milestones from './milestoneInfoArray.js';
+import milestones from './data/milestoneInfoArray.js';
 import MilestoneCard from './MilestoneCard.jsx';
 import LineWithDot from './MilestoneLineWithDot.jsx';
 import EmptyCard from './MilestoneEmptyCard.jsx';
