@@ -24,7 +24,6 @@ describe('Homepage', () => {
   });
 
   context('Project Section', () => {
-    // const projectsInfo = await import('./')
     it('project section', function () {
       cy.get('[data-test="project-list-title"]').should(
         'have.text',
