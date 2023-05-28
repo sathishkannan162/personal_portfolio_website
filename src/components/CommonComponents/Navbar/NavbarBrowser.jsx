@@ -12,16 +12,42 @@ export default function NavbarBrowser() {
         md: 'inline-flex',
       }}
     >
-      <NavbarLinkButtonBrowser to="/">🏠Home</NavbarLinkButtonBrowser>
+      <NavbarLinkButtonBrowser
+        data-test="navlink-browser"
+        data-cy="home"
+        to="/"
+      >
+        🏠Home
+      </NavbarLinkButtonBrowser>
       <MenuContainer closeMenu={() => {}} />
-      <NavbarLinkButtonBrowser to="/milestones">
+      <NavbarLinkButtonBrowser
+        data-test="navlink-browser"
+        data-cy="Milestones"
+        to="/milestones"
+      >
         💎Milestones
       </NavbarLinkButtonBrowser>
-      <NavbarLinkButtonBrowser to="/certifications">
+      <NavbarLinkButtonBrowser
+        data-test="navlink-browser"
+        data-cy="Certifications"
+        to="/certifications"
+      >
         🎓Certifications
       </NavbarLinkButtonBrowser>
-      <NavbarLinkButtonBrowser to="/about">✨About </NavbarLinkButtonBrowser>
-      <NavbarLinkButtonBrowser to="/contact">📞Contact</NavbarLinkButtonBrowser>
+      <NavbarLinkButtonBrowser
+        data-test="navlink-browser"
+        data-cy="About"
+        to="/about"
+      >
+        ✨About{' '}
+      </NavbarLinkButtonBrowser>
+      <NavbarLinkButtonBrowser
+        data-test="navlink-browser"
+        data-cy="Contact"
+        to="/contact"
+      >
+        📞Contact
+      </NavbarLinkButtonBrowser>
     </HStack>
   );
 }

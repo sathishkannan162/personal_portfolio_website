@@ -50,7 +50,11 @@ const DropDownMenu = ({ projectTags, closeMenu }) => {
             rounded="md"
           >
             <Box p={3} rounded="md">
-              <Heading fontSize={16} fontWeight={600}>
+              <Heading
+                data-test="popover-button-project"
+                fontSize={16}
+                fontWeight={600}
+              >
                 🏅Projects
               </Heading>
             </Box>
