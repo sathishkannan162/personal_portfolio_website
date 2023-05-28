@@ -11,7 +11,7 @@ export default function CertificateCard({ certificate }) {
   };
 
   return (
-    <Box>
+    <Box data-test="certificate-card">
       <Heading fontSize={'xl'} py={4} px={1}>
         {certificate.name}
       </Heading>
