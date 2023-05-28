@@ -66,9 +66,7 @@ describe('Homepage', () => {
       const button = cy.getByData('button-all-projects');
       button.should('have.text', 'All Projects');
       button.click();
-      cy.bUrl('/projects').then((expectedUrl) => {
-        cy.url().should('eq', expectedUrl);
-      });
+      cy.checkUrl('/projects');
     });
   });
 });
