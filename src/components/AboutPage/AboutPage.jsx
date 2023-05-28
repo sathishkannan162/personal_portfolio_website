@@ -6,7 +6,7 @@ export default function AboutPage() {
   const myPhoto =
     'https://projectimages.netlify.app/my_photos/my_photo_about.jpg';
   return (
-    <PageContainer>
+    <PageContainer data-test="about-page">
       <Heading>About Me</Heading>
       <br />
       <Box

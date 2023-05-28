@@ -1,6 +1,6 @@
 import { Box } from '@chakra-ui/react';
 
-export default function PageContainer({ children }) {
+export default function PageContainer({ children, ...props }) {
   return (
     <Box
       maxW="1000px"
@@ -8,6 +8,7 @@ export default function PageContainer({ children }) {
       mx="auto"
       my="30px"
       px="20px"
+      {...props}
     >
       {/* my default maxW was 1200px in other pages but reduced to 1000px here */}
       {children}
