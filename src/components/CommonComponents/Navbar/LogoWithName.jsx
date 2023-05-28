@@ -5,7 +5,13 @@ export default function LogoWithName({ Logo, Name }) {
   return (
     <Flex>
       <Link to="/">
-        <Image src={Logo} w="30px" h="30px" alt="Sathish kannan Logo" />
+        <Image
+          src={Logo}
+          data-test={'site-logo'}
+          w="30px"
+          h="30px"
+          alt="Sathish kannan Logo"
+        />
       </Link>
       <Link to="/">
         <VisuallyHidden>{Name}</VisuallyHidden>
@@ -16,6 +22,7 @@ export default function LogoWithName({ Logo, Name }) {
           fontWeight="medium"
           ml="2"
           _hover={{ color: 'gray.600' }}
+          data-test="sitename"
         >
           {Name}
         </chakra.h1>

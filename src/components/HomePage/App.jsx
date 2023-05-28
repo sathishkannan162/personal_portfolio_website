@@ -6,10 +6,10 @@ import { FaArrowRight } from 'react-icons/fa';
 
 function App() {
   return (
-    <div>
+    <div>  
       <CallToActionWithVideo />
       <ProjectList title={'Projects'} count={6} skip={0} interactive={false} />
-      <Box
+      <Box 
         display={'flex'}
         maxW="1200px"
         mx="auto"
@@ -18,7 +18,7 @@ function App() {
         paddingBottom={5}
         justifyContent="right"
       >
-        <AllProjectsAnimateButton text="All projects" Icon={FaArrowRight} />
+        <AllProjectsAnimateButton text="All Projects" Icon={FaArrowRight} />
       </Box>
     </div>
   );

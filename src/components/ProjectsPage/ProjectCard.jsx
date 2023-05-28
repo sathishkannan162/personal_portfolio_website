@@ -22,7 +22,13 @@ export default function ProjectCard({ project }) {
             zIndex="1"
           ></Box>
           {/* click links to hosted project */}
-          <a href={project.link} target="_blank">
+          <a
+            href={project.link}
+            // data-test={`project project-${project.projectID}`}
+            data-test="project-card"
+            data-cy={`project-${project.projectID}`}
+            target="_blank"
+          >
             <Box
               borderWidth="1px"
               rounded="lg"

@@ -41,6 +41,7 @@ export default function CallToActionWithVideo() {
                   transition={{ duration: 0.5 }}
                 >
                   <Image
+                    data-test="hero-image"
                     alt="my-photo"
                     fit="cover"
                     align="center"

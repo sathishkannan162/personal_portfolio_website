@@ -20,7 +20,11 @@ const ProjectList = (props) => {
   return (
     <Container maxWidth="1200px" mx="auto" my="auto" p={{ base: 5, md: 10 }}>
       {/* when interactive comboBox with Project list appears, if not title for tag will appear with project list */}
-      {!interactive && <Heading py={3}>{title}</Heading>}
+      {!interactive && (
+        <Heading py={3} data-test="project-list-title">
+          {title}
+        </Heading>
+      )}
       {interactive && (
         <Box>
           <Flex
