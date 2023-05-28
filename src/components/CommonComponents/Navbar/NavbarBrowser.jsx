@@ -19,7 +19,7 @@ export default function NavbarBrowser() {
       >
         🏠Home
       </NavbarLinkButtonBrowser>
-      <MenuContainer closeMenu={() => {}} />
+      <MenuContainer data-test='popover-trigger-browser' closeMenu={() => {}} />
       <NavbarLinkButtonBrowser
         data-test="navlink-browser"
         data-cy="Milestones"

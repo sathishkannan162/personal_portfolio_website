@@ -16,19 +16,23 @@ import { FaChevronDown } from 'react-icons/fa';
 import projectTags from '../../../data/projectTags.js';
 import DropDownItem from './ProjectMenuDropDownItem.jsx';
 
-const ProjectMenuContainer = ({ closeMenu }) => {
+const ProjectMenuContainer = ({ closeMenu, ...props }) => {
   return (
     <Flex
       justifyContent={{ base: 'flex-start', sm: 'center' }}
       alignItems="flex-start"
     >
-      <DropDownMenu projectTags={projectTags} closeMenu={closeMenu} />
+      <DropDownMenu
+        projectTags={projectTags}
+        closeMenu={closeMenu}
+        {...props}
+      />
     </Flex>
   );
 };
 
 // Ideally, DropDownMenu component should be used. The MenuContainer component is used to style the preview.
-const DropDownMenu = ({ projectTags, closeMenu }) => {
+const DropDownMenu = ({ projectTags, closeMenu, ...props }) => {
   const linkColor = 'blue.200';
   const { onOpen, onClose, isOpen } = useDisclosure();
 
@@ -51,7 +55,7 @@ const DropDownMenu = ({ projectTags, closeMenu }) => {
           >
             <Box p={3} rounded="md">
               <Heading
-                data-test="popover-button-project"
+                data-test={props['data-test']}
                 fontSize={16}
                 fontWeight={600}
               >
@@ -83,10 +87,13 @@ const DropDownMenu = ({ projectTags, closeMenu }) => {
         >
           <Wrap>
             <DropDownItem
+              data-test={'popover-items'}
+              data-cy="popover-all"
               key={'all'}
               href={'/projects'}
               tag="All Projects"
               closeMenu={closeMenu}
+              mobile={props['data-test'] === 'popover-trigger-mobile'}
             />
             {projectTags.map((tag, index) => (
               <DropDownItem
@@ -94,6 +101,7 @@ const DropDownMenu = ({ projectTags, closeMenu }) => {
                 href={`/projects/${tag}`}
                 tag={tag}
                 closeMenu={closeMenu}
+                mobile={props['data-test'] === 'popover-trigger-mobile'}
               />
             ))}
           </Wrap>

@@ -55,7 +55,10 @@ export default function NavbarMobile({ bg }) {
         <NavbarLinkButtonMobile onClick={mobileNav.onClose} to="/">
           🏠Home
         </NavbarLinkButtonMobile>
-        <ProjectMenuContainer closeMenu={mobileNav.onClose} />
+        <ProjectMenuContainer
+          data-test="popover-trigger-mobile"
+          closeMenu={mobileNav.onClose}
+        />
         <NavbarLinkButtonMobile onClick={mobileNav.onClose} to="/milestones">
           💎Milestones
         </NavbarLinkButtonMobile>
