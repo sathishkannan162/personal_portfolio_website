@@ -33,3 +33,9 @@ Cypress.Commands.add('bUrl', (subUrl) => {
   const fullUrl = new URL(subUrl, baseUrl);
   return fullUrl.toString();
 });
+
+Cypress.Commands.add('checkUrl', (url) => {
+  cy.bUrl(url).then((expectedUrl) => {
+    cy.url().should('eq', expectedUrl);
+  });
+});
