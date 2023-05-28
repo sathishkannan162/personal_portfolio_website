@@ -9,7 +9,7 @@ import {
 } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 
-const MilestoneCard = ({ id, title, description, date }) => {
+const MilestoneCard = ({ id, title, description, date, ...props }) => {
   // For even id show card on left side
   // For odd id show card on right side
   const isEvenId = id % 2 == 0;
@@ -50,7 +50,7 @@ const MilestoneCard = ({ id, title, description, date }) => {
   };
 
   return (
-    <Box flex={1}>
+    <Box flex={1} {...props}>
       <motion.div initial="hidden" whileInView="visible" variants={container}>
         <HStack
           flex={1}
@@ -78,7 +78,11 @@ const MilestoneCard = ({ id, title, description, date }) => {
         >
           <Box>
             <motion.div variants={item}>
-              <Text fontSize="lg" color={isEvenId ? 'teal.400' : 'blue.400'}>
+              <Text
+                fontSize="lg"
+                color={isEvenId ? 'teal.400' : 'blue.400'}
+                data-test="milestone-date"
+              >
                 {date}
               </Text>
             </motion.div>
@@ -91,10 +95,14 @@ const MilestoneCard = ({ id, title, description, date }) => {
                 fontWeight="bold"
                 w="100%"
               >
-                <motion.div variants={item}>{title}</motion.div>
+                <motion.div variants={item} data-test="milestone-title">
+                  {title}
+                </motion.div>
               </chakra.h1>
               <motion.div variants={item}>
-                <Text fontSize="md">{description}</Text>
+                <Text fontSize="md" data-test="milestone-description">
+                  {description}
+                </Text>
               </motion.div>
             </VStack>
           </Box>

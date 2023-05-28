@@ -15,6 +15,7 @@ export default function TopScrollIndicator() {
         scaleX: scrollYProgress,
         zIndex: 1,
       }}
+      data-test="scroll bar"
     ></motion.div>
   );
 }

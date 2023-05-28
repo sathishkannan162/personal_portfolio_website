@@ -17,15 +17,17 @@ const MilestoneTree = () => {
         <Flex key={milestone.id} mb="10px">
           {/* Desktop view(left card) */}
           {isDesktop && milestone.id % 2 === 0 && (
-            <MilestoneLeftCard {...milestone} />
+            <MilestoneLeftCard data-test="milestone-desktop" {...milestone} />
           )}
 
           {/* Mobile view */}
-          {isMobile && <MilestoneMobileCard {...milestone} />}
+          {isMobile && (
+            <MilestoneMobileCard data-test="milestone-mobile" {...milestone} />
+          )}
 
           {/* Desktop view(right card) */}
           {isDesktop && milestone.id % 2 !== 0 && (
-            <MilestoneRightCard {...milestone} />
+            <MilestoneRightCard data-test="milestone-desktop" {...milestone} />
           )}
         </Flex>
       ))}
