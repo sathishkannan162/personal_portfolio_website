@@ -4,7 +4,7 @@ import StandardLink from '../CommonComponents/StandardLink';
 
 export default function ContactPage() {
   return (
-    <PageContainer>
+    <PageContainer data-test="contact-page">
       <Box minH={'70vh'}>
         <Heading>Contact</Heading>
         <br />
