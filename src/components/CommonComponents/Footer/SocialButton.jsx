@@ -1,6 +1,6 @@
 import { chakra, VisuallyHidden, useColorModeValue } from '@chakra-ui/react';
 
-const SocialButton = ({ children, label, href }) => {
+const SocialButton = ({ children, label, href, ...props }) => {
   return (
     <chakra.button
       bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
@@ -17,6 +17,7 @@ const SocialButton = ({ children, label, href }) => {
       _hover={{
         bg: useColorModeValue('blackAlpha.200', 'whiteAlpha.200'),
       }}
+      {...props}
     >
       <VisuallyHidden>{label}</VisuallyHidden>
       {children}
@@ -25,3 +26,4 @@ const SocialButton = ({ children, label, href }) => {
 };
 
 export default SocialButton;
+
