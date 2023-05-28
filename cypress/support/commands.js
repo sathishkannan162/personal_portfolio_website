@@ -24,6 +24,12 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-Cypress.Commands.add("getByData", (selector) => {
-  return cy.get(`[data-test=${selector}]`)
-})
+Cypress.Commands.add('getByData', (selector) => {
+  return cy.get(`[data-test=${selector}]`);
+});
+
+Cypress.Commands.add('bUrl', (subUrl) => {
+  const baseUrl = Cypress.config().baseUrl;
+  const fullUrl = new URL(subUrl, baseUrl);
+  return fullUrl.toString();
+});

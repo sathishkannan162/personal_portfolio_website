@@ -12,12 +12,16 @@ module.exports = {
   plugins: ['react-refresh'],
   rules: {
     'react-refresh/only-export-components': 'warn',
+    'react/prop-types': 0,
   },
   globals: {
     // global variables for e2e testign with cypress
     cy: 'readonly',
     describe: 'readonly',
     it: 'readonly',
-    Cypress: 'readonly'
-  }
-}
+    Cypress: 'readonly',
+    beforeEach: 'readonly',
+    afterEach: 'readonly',
+    context: 'readonly',
+  },
+};
