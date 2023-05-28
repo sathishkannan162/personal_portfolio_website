@@ -2,11 +2,13 @@ import { Box } from '@chakra-ui/react';
 import { useParams } from 'react-router-dom';
 import ProjectList from '../ProjectsPage/ProjectList';
 import projectTags from '../../data/projectTags';
+import ErrorProjectTagPage from '../ErrorPage/ErrorProjectTagPage';
 
 export default function ProjectsByTags() {
   const { tag } = useParams();
   if (!projectTags.includes(tag)) {
-    throw new Error('no such project tag found');
+    // throw new Error('no such project tag found');
+    return <ErrorProjectTagPage message='no such project tag found'/>;
   }
   return (
     <>

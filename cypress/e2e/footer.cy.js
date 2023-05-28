@@ -21,7 +21,7 @@ describe('Footer', () => {
       .should('have.text', 'Source Code on github')
       .should('have.attr', 'href');
   });
-  it.only('check social icons', () => {
+  it('check social icons', () => {
     let socialIcons = cy.getByData('social-icon');
     socialIcons.its('length').should('eq', 5);
     socialIcons = cy.getByData('social-icon');
