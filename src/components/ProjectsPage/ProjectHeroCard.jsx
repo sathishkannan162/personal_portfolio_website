@@ -10,6 +10,7 @@ const ProjectHeroCard = (props) => {
       initial={{ opacity: 0, translateX: '100%' }}
       animate={{ opacity: 1, translateX: '0' }}
       transition={{ duration: 0.5 }}
+      data-test="featured-project"
     >
       <Flex
         _dark={{ bg: '#3e3e3e' }}
@@ -67,7 +68,7 @@ const ProjectHeroCard = (props) => {
               colorScheme={'blue'}
               rightIcon={<FaExternalLinkAlt />}
             >
-              <a href={link} target="_blank">
+              <a href={link} target="_blank" data-test='featured-project-link'>
                 View
               </a>
             </Button>

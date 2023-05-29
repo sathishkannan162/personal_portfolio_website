@@ -78,7 +78,7 @@ export default function ProjectCard({ project }) {
                 <HStack py={2}>
                   {project.tags.slice(0, 3).map((tag, index) => {
                     return (
-                      <Tag key={index} colorScheme={'teal'}>
+                      <Tag data-test='project-tag' key={index} colorScheme={'teal'}>
                         <Text fontSize={12}>{tag}</Text>
                       </Tag>
                     );

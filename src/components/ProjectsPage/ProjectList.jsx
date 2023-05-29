@@ -43,11 +43,12 @@ const ProjectList = (props) => {
               text={text}
               setText={setText}
               setTagSelect={setTagSelect}
+              data-test="tag-select"
             />
           </Flex>
         </Box>
       )}
-      <SimpleGrid columns={[1, 2, 3]} spacing="15px">
+      <SimpleGrid columns={[1, 2, 3]} spacing="15px" data-test="project-list">
         {filterProjectsByTag(projects, tag || tagSelect)
           .slice(skip, count ? count + skip : undefined)
           .map((project) => {

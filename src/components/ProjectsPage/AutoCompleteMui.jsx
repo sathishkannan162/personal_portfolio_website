@@ -9,7 +9,7 @@ let options = projectTags.map((tag) => {
 const muiTheme = createTheme();
 
 export default function ComboBox(props) {
-  const { text, setText, setTagSelect } = props;
+  const { text, setText, setTagSelect, ...extra } = props;
   const handleInputChange = (_e, inputValue) => {
     setText(inputValue);
   };
@@ -27,6 +27,7 @@ export default function ComboBox(props) {
         inputValue={text}
         onInputChange={handleInputChange}
         onChange={handleChange}
+        {...extra}
       />
     </ThemeProvider>
   );
