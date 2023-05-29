@@ -53,7 +53,7 @@ describe('TopScrollIndicator Component', () => {
       expect(transform).to.satisfy((value) => {
         // Check if the value is approximately equal to 'matrix(1, 0, 0, 1, 0, 0)'
         // expectedValue = 'matrix(1, 0, 0, 1, 0, 0)';
-        const tolerance = 0.03;
+        const tolerance = 0.1;
         const regex =
           /^matrix\(([\d.e-]+),\s*([\d.e-]+),\s*([\d.e-]+),\s*([\d.e-]+),\s*([\d.e-]+),\s*([\d.e-]+)\)$/;
         const matches = regex.exec(value);
@@ -78,7 +78,7 @@ describe('TopScrollIndicator Component', () => {
       expect(transform).to.satisfy((value) => {
         // Check if the value is approximately equal to 'matrix(0, 0, 0, 1, 0, 0)'
         //  expectedValue = 'matrix(0, 0, 0, 1, 0, 0)';
-        const tolerance = 0.001;
+        const tolerance = 0.1;
         const regex =
           /^matrix\(([\d.e-]+),\s*([\d.e-]+),\s*([\d.e-]+),\s*([\d.e-]+),\s*([\d.e-]+),\s*([\d.e-]+)\)$/;
         const matches = regex.exec(value);

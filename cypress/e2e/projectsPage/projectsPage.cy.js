@@ -4,7 +4,7 @@ let featuredProject = projects[1];
 
 describe('Projects Page', () => {
   beforeEach(() => {
-    cy.visit('/projects'); // Assuming the Projects page is accessible at '/projects'
+    cy.visit('/projects');
   });
   it('should display the featured project', () => {
     cy.get('[data-test="featured-project"]').should('be.visible');
@@ -42,14 +42,12 @@ describe('Projects Page', () => {
         });
       });
     });
-    // cy.url().should('include', projects[0].link);
   });
 
   it('should filter projects by tag React', () => {
     const selectedTag = 'React';
     const filteredProjects = filterProjectsByTag(projects, selectedTag);
     cy.get('[data-test="tag-select"]').click().type('Rea').type('{enter}');
-    // cy.get('[data-test="project-card"]').first().should('contain', selectedTag);
     const projectCards = cy.get('[data-test="project-card"]');
     projectCards.each(($el, index) => {
       cy.wrap($el).should('have.attr', 'href', filteredProjects[index].link);
