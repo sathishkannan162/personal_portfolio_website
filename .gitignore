@@ -26,3 +26,8 @@ dist-ssr
 
 # practice
 src/practice/
+
+# cypress videos and screenshots for tests
+
+cypress/videos/
+cypress/screenshots
