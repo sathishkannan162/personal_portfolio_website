@@ -24,11 +24,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build Vite project
-        run: npm run build
-
       - name: Start local server
-        run: npm run preview & sleep 10
+        run: npm run dev & sleep 10
 
       - name: Run Cypress tests
         run: npx cypress run --headless --browser chrome
