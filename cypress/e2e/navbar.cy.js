@@ -35,8 +35,6 @@ describe('Navbar links', () => {
         element.click();
         element.invoke('text').should('match', navText[index]);
         cy.checkUrl(navLinks[index]);
-        // cy.wait(3000);
-        // cy.scrollTo('bottom', { duration: 1000 });
       });
     });
     it('pop over visible when hovering', () => {
