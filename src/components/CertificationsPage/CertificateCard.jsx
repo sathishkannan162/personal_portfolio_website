@@ -24,6 +24,7 @@ export default function CertificateCard({ certificate }) {
         onHoverEnd={handleHover}
         whileTap={{ scale: 0.9 }}
         transition={{ duration: 0.2 }}
+        data-test="certificate-div"
       >
         <Link href={certificate.certificateUrl} target="_blank">
           <Box
