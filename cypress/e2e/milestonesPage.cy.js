@@ -25,7 +25,7 @@ describe('Milestones page', () => {
   });
 });
 
-describe('Milestones Page', () => {
+describe('Check milestone page for different view ports', () => {
   before(() => {
     cy.viewport('iphone-6'); // Set initial viewport to mobile
     cy.visit('/milestones'); // Replace with the actual URL of the Milestones page
