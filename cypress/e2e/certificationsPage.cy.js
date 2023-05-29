@@ -1,13 +1,8 @@
-// describe('Certifications page', () => {
-//   it('passes', () => {
-//   })
-// })
 import certificationsInfoArray from '../../src/data/certificationsInfoArray';
 
 describe('Certifications Page', () => {
   beforeEach(() => {
-    cy.visit('/certifications'); // Assuming the certifications page URL is '/certifications'
-    // cy.wait(500);
+    cy.visit('/certifications');
   });
 
   it('displays the heading', () => {
@@ -43,7 +38,6 @@ describe('Certifications Page', () => {
           'href',
           certificationsInfoArray[index].certificateUrl
         );
-        // cy.get('img').should('be.visible');
       });
     });
   });
