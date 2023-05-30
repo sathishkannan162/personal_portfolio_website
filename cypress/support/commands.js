@@ -39,3 +39,7 @@ Cypress.Commands.add('checkUrl', (url) => {
     cy.url().should('eq', expectedUrl);
   });
 });
+
+// Cypress.Commands.add('ChakraRender', (component) => {
+//   cy.mount(<ChakraProvider>{component}</ChakraProvider>);
+// });
