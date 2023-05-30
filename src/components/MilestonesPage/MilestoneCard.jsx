@@ -75,6 +75,7 @@ const MilestoneCard = ({ id, title, description, date, ...props }) => {
             right: rightValue,
             display: 'block',
           }}
+          data-test="milestone-card"
         >
           <Box>
             <motion.div variants={item}>
