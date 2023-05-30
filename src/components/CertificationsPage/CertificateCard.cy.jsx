@@ -25,7 +25,7 @@ describe('<CertificateCard />', () => {
   });
 
   // hover doesn't work for the below test
-  // it.only('changes scale on hover', () => {
+  // it('changes scale on hover', () => {
   //   cy.wait(500);
   //   cy.get('[data-test="certificate-div"]').trigger('mouseover');
   //   // cy.get('a').trigger('mouseover');
