@@ -16,7 +16,7 @@ const navText = [
   /Contact/,
 ];
 
-import projectTags from '../../src/data/projectTags';
+import projectTags from '../../../src/data/projectTags';
 const projectTagsAll = ['All Projects', ...projectTags];
 const projectTagsLinks = ['', ...projectTags];
 

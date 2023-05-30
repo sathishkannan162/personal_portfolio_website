@@ -1,4 +1,4 @@
-import projectsInfoArray from '../../src/data/projectInfoArray.js';
+import projectsInfoArray from '../../../src/data/projectInfoArray.js';
 
 describe('Homepage', () => {
   beforeEach('Visit Homepage', () => {

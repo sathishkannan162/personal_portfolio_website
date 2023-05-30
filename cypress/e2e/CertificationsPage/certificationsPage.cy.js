@@ -1,4 +1,4 @@
-import certificationsInfoArray from '../../src/data/certificationsInfoArray';
+import certificationsInfoArray from '../../../src/data/certificationsInfoArray';
 
 describe('Certifications Page', () => {
   beforeEach(() => {

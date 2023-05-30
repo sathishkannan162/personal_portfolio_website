@@ -1,4 +1,4 @@
-import milestoneInfoArray from '../../src/data/milestoneInfoArray.js';
+import milestoneInfoArray from '../../../src/data/milestoneInfoArray.js';
 
 describe('Milestones page', () => {
   beforeEach('Visit Milestones page', () => {
