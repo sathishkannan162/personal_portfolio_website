@@ -63,7 +63,7 @@ describe('Projects Page', () => {
     });
     // cy.url().should('include', projects[0].link);
   });
-  it.only('should filter projects by tag Nodejs', () => {
+  it('should filter projects by tag Nodejs', () => {
     const selectedTag = 'Nodejs';
     const filteredProjects = filterProjectsByTag(projects, selectedTag);
     cy.get('[data-test="tag-select"]').click().type('No').type('{enter}');

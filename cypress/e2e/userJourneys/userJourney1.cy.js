@@ -36,7 +36,7 @@ describe('simulate mouse movements in user journeys', () => {
     cy.scrollTo('bottom', { duration: 1000 });
     cy.scrollTo('top', { duration: 1000 });
   });
-  it.only('visit about page', () => {
+  it('visit about page', () => {
     cy.get('[data-cy="About"]').click();
     cy.checkUrl('/about');
     cy.scrollTo('bottom', { duration: 1000 });
