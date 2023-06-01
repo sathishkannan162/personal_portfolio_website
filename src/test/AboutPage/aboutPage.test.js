@@ -48,7 +48,6 @@ describe('AboutPage component', () => {
     expect(linkedInLinkElement).toHaveAttribute(
       'href',
       "https://twitter.com/Sathish06030039"
-      // 'https://www.linkedin.com/in/sathish-kannan-a48a39166/'
     );
   });
   it('renders Instagram link', () => {

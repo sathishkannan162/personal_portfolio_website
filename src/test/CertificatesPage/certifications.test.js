@@ -4,7 +4,6 @@ import Certifications from '../../components/CertificationsPage/Certifications';
 import certificationsInfoArray from '../../data/certificationsInfoArray';
 
 class IntersectionObserver {
-  // constructor(callback, options) {}
   constructor(callback, options) {
     this.callback = callback;
     this.options = options;

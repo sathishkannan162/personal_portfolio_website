@@ -1,9 +1,6 @@
 import React from 'react';
-import { getByAltText, render } from '../test-utils'
-import { useColorModeValue } from '@chakra-ui/react';
+import { render } from '../test-utils'
 import Navbar from '../../components/CommonComponents/Navbar/Navbar';
-import prettier from 'prettier/standalone';
-import parserHtml from 'prettier/parser-html';
 
 // Mock the useColorModeValue function
 // jest.mock('@chakra-ui/react', () => ({
@@ -13,19 +10,11 @@ import parserHtml from 'prettier/parser-html';
 
 describe('Navbar', () => {
     test('renders the navbar correctly', () => {
-        // Mock the useColorModeValue function to return 'white'
-        // useColorModeValue.mockReturnValue('white');
 
-        const { getByTestId, getByText } = render(<Navbar />);
+        const { getByTestId } = render(<Navbar />);
 
         const header = getByTestId('navbar-header');
-        // const formattedHtml = prettier.format(header.innerHTML, {
-        //     parser: 'html',
-        //     plugins: [parserHtml],
-        // });
-        // console.log(formattedHtml);
         expect(header).toBeInTheDocument();
-        // expect(header).toHaveStyle('background-color: white');
 
         const logoWithName = getByTestId('site-logo');
         expect(logoWithName).toBeInTheDocument();
