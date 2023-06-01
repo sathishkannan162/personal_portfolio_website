@@ -31,3 +31,6 @@ src/practice/
 
 cypress/videos/
 cypress/screenshots
+
+# jest coverage reports
+coverage/
