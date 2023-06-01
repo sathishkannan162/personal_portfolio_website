@@ -26,5 +26,10 @@ module.exports = {
     expect: 'readonly',
     before: 'readonly',
     after: 'readonly',
+    // jest globals
+    jest: 'readonly',
+    test: 'readonly',
+    require: 'readonly',
+    render: 'readonly'
   },
 };
