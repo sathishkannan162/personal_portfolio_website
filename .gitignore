@@ -34,3 +34,6 @@ cypress/screenshots
 
 # jest coverage reports
 coverage/
+
+# vitest ui and coverage
+html/

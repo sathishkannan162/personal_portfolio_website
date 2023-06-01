@@ -13,7 +13,8 @@
     "cypress:headless": "Cypress run --headless --browser edge",
     "jest:watch": "jest --watch",
     "vitest": "vitest",
-    "vitest:coverage": "vitest run --coverage"
+    "vitest:coverage": "vitest run --coverage",
+    "vitest:ui": "vitest --ui"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.6.1",
@@ -41,6 +42,7 @@
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react": "^4.0.0",
     "@vitest/coverage-c8": "^0.31.4",
+    "@vitest/ui": "^0.31.4",
     "babel": "^6.23.0",
     "babel-cli": "^6.26.0",
     "cypress": "^12.13.0",
