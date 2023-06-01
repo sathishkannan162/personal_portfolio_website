@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CertificateCard captures and compares component snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="css-0"
+    data-test="certificate-card"
+  >
+    <h2
+      class="chakra-heading css-sj68pu"
+    >
+      Certificate Name
+    </h2>
+    <div
+      data-test="certificate-div"
+      style="opacity: 0; transform: translateY(20px) translateZ(0);"
+      tabindex="0"
+    >
+      <a
+        class="chakra-link css-spn4bz"
+        href="https://example.com"
+        target="_blank"
+      >
+        <div
+          class="css-1yj8dtn"
+        >
+          <div
+            class="css-88irkg"
+          >
+            <img
+              alt="placeholder image"
+              class="chakra-image css-q7lffx"
+              src="https://projectimages.netlify.app/certificates/certificate_1.jpeg"
+            />
+          </div>
+          <div>
+            <div
+              class="css-iw9ipp"
+            >
+              <h2
+                class="chakra-heading css-c7nxzi"
+              >
+                <p
+                  class="chakra-text css-1oj1yll"
+                >
+                  Certificate Name
+                </p>
+                <p
+                  class="chakra-text css-1rhvqo5"
+                >
+                  Certificate Provider
+                </p>
+                <p
+                  class="chakra-text css-5t65gu"
+                >
+                  Click Card to View
+                </p>
+              </h2>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <span
+    hidden=""
+    id="__chakra_env"
+  />
+</DocumentFragment>
+`;

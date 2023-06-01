@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LogoWithName LogoWithName renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="css-k008qs"
+  >
+    <a
+      href="/"
+    >
+      <img
+        alt="Sathish kannan Logo"
+        class="chakra-image css-c2uxn6"
+        data-test="site-logo"
+        src="test-logo.png"
+      />
+    </a>
+    <a
+      href="/"
+    >
+      <span
+        class="css-idkz9h"
+      >
+        Test Site
+      </span>
+    </a>
+    <a
+      href="/"
+    >
+      <h1
+        class="css-1fg4y8a"
+        data-test="sitename"
+      >
+        Test Site
+      </h1>
+    </a>
+  </div>
+  <span
+    hidden=""
+    id="__chakra_env"
+  />
+</DocumentFragment>
+`;
