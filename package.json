@@ -61,6 +61,11 @@
     ],
     "moduleNameMapper": {
       "\\.(css|less)$": "identity-obj-proxy"
-    }
+    },
+    "coverageReporters": [
+      "html",
+      "text",
+      "json"
+    ]
   }
 }
