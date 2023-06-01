@@ -30,7 +30,7 @@ exports[`CertificateCard captures and compares component snapshot 1`] = `
             <img
               alt="placeholder image"
               class="chakra-image css-q7lffx"
-              src="https://projectimages.netlify.app/certificates/certificate_1.jpeg"
+              src="https://projectimages.netlify.app/placeholder_square.webp"
             />
           </div>
           <div>
