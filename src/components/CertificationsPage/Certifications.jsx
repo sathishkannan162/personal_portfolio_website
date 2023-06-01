@@ -1,3 +1,4 @@
+import React from 'react';
 import { Heading, SimpleGrid, Box } from '@chakra-ui/react';
 import CertificateCard from './CertificateCard';
 import PageContainer from '../CommonComponents/PageContainer';

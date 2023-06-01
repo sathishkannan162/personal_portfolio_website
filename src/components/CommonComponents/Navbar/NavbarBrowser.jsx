@@ -1,3 +1,4 @@
+import React from 'react';
 import { HStack } from '@chakra-ui/react';
 import NavbarLinkButtonBrowser from './NavbarLinkButtonBrowser';
 import MenuContainer from './ProjectMenu';
@@ -11,6 +12,7 @@ export default function NavbarBrowser() {
         base: 'none',
         md: 'inline-flex',
       }}
+      data-test='navbar-browser'
     >
       <NavbarLinkButtonBrowser
         data-test="navlink-browser"

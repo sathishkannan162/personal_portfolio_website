@@ -1,3 +1,4 @@
+import React from 'react';
 import { Flex, VisuallyHidden, chakra, Image } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 

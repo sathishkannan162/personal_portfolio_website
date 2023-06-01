@@ -1,6 +1,5 @@
 import React from 'react';
 import { chakra, Flex, useColorModeValue, HStack } from '@chakra-ui/react';
-import Logo from '../../../assets/website_logo.png';
 import LogoWithName from './LogoWithName';
 import NavbarBrowser from './NavbarBrowser';
 import NavbarMobile from './NavbarMobile';
@@ -18,6 +17,7 @@ const Navbar = () => {
         }}
         py={4}
         shadow="md"
+        data-test='navbar-header'
       >
         <Flex
           maxW="1200px"
@@ -25,7 +25,7 @@ const Navbar = () => {
           justifyContent="space-between"
           mx="auto"
         >
-          <LogoWithName Logo={Logo} Name={'Sathish Kannan'} />
+          <LogoWithName Logo={'https://projectimages.netlify.app/website_logo/website_logo.png'} Name={'Sathish Kannan'} />
           <HStack display="flex" alignItems="center" spacing={1}>
             <NavbarBrowser />
             <NavbarMobile bg={bg} />

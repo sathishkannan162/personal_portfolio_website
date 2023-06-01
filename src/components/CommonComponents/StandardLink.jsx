@@ -1,3 +1,5 @@
+// eslint-disable-next-line no-unused-vars
+import React from 'react';
 import { Link, Text } from '@chakra-ui/react';
 export default function StandardLink({ href, children }) {
   return (

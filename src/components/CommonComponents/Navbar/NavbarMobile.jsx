@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   Box,
   IconButton,
@@ -17,6 +18,7 @@ export default function NavbarMobile({ bg }) {
         base: 'inline-flex',
         md: 'none',
       }}
+      data-test='navbar-mobile'
     >
       <IconButton
         display={{

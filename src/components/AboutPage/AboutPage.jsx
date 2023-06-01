@@ -1,3 +1,5 @@
+// eslint-disable-next-line no-unused-vars
+import React from 'react';
 import { Heading, Text, Image, Box } from '@chakra-ui/react';
 import PageContainer from '../CommonComponents/PageContainer';
 import StandardLink from '../CommonComponents/StandardLink';
