@@ -1,6 +1,6 @@
 import React from 'react';
-import projectTags from '../../data/projectTags';
-import TestCombobox from '../componentTesting/TestCombobox';
+import projectTags from '../../src/data/projectTags';
+import TestCombobox from '../../src/components/componentTesting/TestCombobox';
 
 describe('<ComboBox />', () => {
   let options = projectTags.map((tag) => {

@@ -1,7 +1,7 @@
 import { ChakraProvider } from '@chakra-ui/react';
 import { FaArrowRight } from 'react-icons/fa';
 import { MemoryRouter } from 'react-router-dom';
-import AllProjectsAnimateButton from './AllProjectsAnimateButton';
+import AllProjectsAnimateButton from '../../src/components/HomePage/AllProjectsAnimateButton';
 
 describe('<AllProjectsAnimateButton />', () => {
   it('renders', () => {

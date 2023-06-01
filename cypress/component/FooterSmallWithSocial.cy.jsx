@@ -1,6 +1,6 @@
 import { ChakraProvider } from '@chakra-ui/react';
 import React from 'react';
-import SmallWithSocial from './Footer';
+import SmallWithSocial from '../../src/components/CommonComponents/Footer/Footer';
 
 describe('<SmallWithSocial />', () => {
   beforeEach(() => {

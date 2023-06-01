@@ -1,9 +1,9 @@
 import React from 'react';
-import ProjectList from './ProjectList';
+import ProjectList from '../../src/components/ProjectsPage/ProjectList';
 import { ChakraProvider } from '@chakra-ui/react';
-import projectInfoArray from '../../data/projectInfoArray';
-import truncateBlogTitle from './helpers/truncateBlogTitle';
-import filterProjectsByTag from './helpers/filterProjectsByTags';
+import projectInfoArray from '../../src/data/projectInfoArray';
+import truncateBlogTitle from '../../src/components/ProjectsPage/helpers/truncateBlogTitle';
+import filterProjectsByTag from '../../src/components/ProjectsPage/helpers/filterProjectsByTags';
 
 describe('<ProjectList />', () => {
   it('renders the project list with the given title', () => {

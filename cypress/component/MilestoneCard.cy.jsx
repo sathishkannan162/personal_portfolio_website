@@ -1,5 +1,5 @@
 import React from 'react';
-import MilestoneCard from './MilestoneCard';
+import MilestoneCard from '../../src/components/MilestonesPage/MilestoneCard';
 import { ChakraProvider, Box } from '@chakra-ui/react';
 
 describe('<MilestoneCard />', () => {

@@ -1,21 +1,6 @@
-// import React from 'react';
-// import AboutPage from './AboutPage';
-// import { ChakraProvider } from '@chakra-ui/react';
-
-// describe('<AboutPage />', () => {
-//   it('renders', () => {
-//     cy.mount(
-//       <ChakraProvider>
-//         <AboutPage />
-//       </ChakraProvider>
-//     );
-//     // cy.viewport('macbook-13');
-//   });
-// });
-
 import React from 'react';
 import { ChakraProvider } from '@chakra-ui/react';
-import AboutPage from './AboutPage';
+import AboutPage from '../../src/components/AboutPage/AboutPage';
 
 describe('<AboutPage />', () => {
   beforeEach(() => {
@@ -80,4 +65,3 @@ describe('<AboutPage />', () => {
     cy.scrollTo('top', { duration: 200 });
   });
 });
-

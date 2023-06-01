@@ -18,7 +18,7 @@
 
 import React from 'react';
 import { FaLinkedin } from 'react-icons/fa';
-import SocialButton from './SocialButton';
+import SocialButton from '../../src/components/CommonComponents/Footer/SocialButton';
 import { ChakraProvider } from '@chakra-ui/react';
 
 describe('<SocialButton />', () => {

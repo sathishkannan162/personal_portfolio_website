@@ -1,7 +1,7 @@
 import React from 'react';
-import ProjectCard from './ProjectCard';
+import ProjectCard from '../../src/components/ProjectsPage/ProjectCard';
 import { ChakraProvider } from '@chakra-ui/react';
-import projectInfoArray from '../../data/projectInfoArray';
+import projectInfoArray from '../../src/data/projectInfoArray';
 
 describe('<ProjectCard />', () => {
   const project = projectInfoArray[0];

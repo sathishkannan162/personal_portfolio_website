@@ -1,6 +1,6 @@
 import React from 'react';
-import CertificateCard from './CertificateCard';
-import certifications from '../../data/certificationsInfoArray.js';
+import CertificateCard from '../../src/components/CertificationsPage/CertificateCard';
+import certifications from '../../src/data/certificationsInfoArray.js';
 import { ChakraProvider } from '@chakra-ui/react';
 
 describe('<CertificateCard />', () => {
