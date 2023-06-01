@@ -1,10 +1,12 @@
+// eslint-disable-next-line no-unused-vars
+import React, { useState } from 'react';
 import { Box, Text, Heading, Link, Image } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
-import { useState } from 'react';
-import placeholder_square from '../../assets/placeholder_square.webp';
 
 export default function CertificateCard({ certificate }) {
   const [hover, setHover] = useState(false);
+  const placeholder_square =
+    'https://projectimages.netlify.app/placeholder_square.webp';
 
   const handleHover = () => {
     setHover(!hover);
@@ -36,7 +38,11 @@ export default function CertificateCard({ certificate }) {
             backgroundSize="cover"
           >
             <Box h={'80%'} w="100%">
-              <Image src={placeholder_square} opacity={0} />
+              <Image
+                src={placeholder_square}
+                alt="placeholder image"
+                opacity={0}
+              />
             </Box>
             <motion.div whileHover={{ scale: 1.1 }}>
               <Box
