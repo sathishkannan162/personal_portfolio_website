@@ -18,7 +18,7 @@ const mockCertificate = {
 };
 
 describe('CertificateCard', () => {
-  test('renders certificate card correctly', () => {
+  it('renders certificate card correctly', () => {
     class IntersectionObserver {
       constructor(callback, options) {
         this.callback = callback;

@@ -12,7 +12,8 @@
     "test": "jest",
     "cypress:headless": "Cypress run --headless --browser edge",
     "jest:watch": "jest --watch",
-    "vitest": "vitest"
+    "vitest": "vitest",
+    "vitest:coverage": "vitest run --coverage"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.6.1",

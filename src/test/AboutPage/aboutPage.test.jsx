@@ -1,11 +1,13 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 import { render, screen } from '../test-utils'
+// import { render, screen } from '@testing-library/react'
 import AboutPage from '../../components/AboutPage/AboutPage'
+import {ChakraProvider} from '@chakra-ui/react'
 
 describe('AboutPage component', () => {
   it('renders heading', () => {
-    render(<AboutPage />)
+    render(<ChakraProvider><AboutPage /></ChakraProvider>)
     const headingElement = screen.getByTestId('about-page')
     expect(headingElement).toBeInTheDocument();
   });

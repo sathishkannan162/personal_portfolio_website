@@ -30,6 +30,8 @@ module.exports = {
     jest: 'readonly',
     test: 'readonly',
     require: 'readonly',
-    render: 'readonly'
+    render: 'readonly',
+    // vitest globals
+    vi: 'readonly'
   },
 };

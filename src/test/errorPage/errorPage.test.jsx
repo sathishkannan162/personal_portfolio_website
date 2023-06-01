@@ -1,10 +1,11 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 import ErrorPage from '../../components/ErrorPage/ErrorPage';
-import { render, screen } from '@testing-library/react'
+import { render, screen } from '@testing-library/react';
+import { useRouteError } from 'react-router-dom';
 
-jest.mock('react-router-dom', () => ({
-  useRouteError: jest.fn(),
+vi.mock('react-router-dom', () => ({
+  useRouteError: vi.fn(),
 }));
 
 describe('ErrorPage', () => {
@@ -15,9 +16,9 @@ describe('ErrorPage', () => {
     };
 
     // Mock the useRouteError hook to return the error object
-    jest.spyOn(require('react-router-dom'), 'useRouteError').mockReturnValue(errorMock);
+    vi.mocked(useRouteError).mockReturnValue(errorMock);
 
-    const {asFragment} = render(<ErrorPage />);
+    const { asFragment } = render(<ErrorPage />);
     expect(asFragment()).toMatchSnapshot();
 
     // Check if the error page is rendered
@@ -31,9 +32,9 @@ describe('ErrorPage', () => {
 
   it('renders error page with default message when error is undefined', () => {
     // Mock the useRouteError hook to return undefined
-    jest.spyOn(require('react-router-dom'), 'useRouteError').mockReturnValue(undefined);
+    vi.mocked(useRouteError).mockReturnValue(undefined);
 
-    const {asFragment} = render(<ErrorPage />);
+    const { asFragment } = render(<ErrorPage />);
     expect(asFragment()).toMatchSnapshot();
 
     // Check if the error page is rendered
@@ -42,6 +43,8 @@ describe('ErrorPage', () => {
 
     // Check if the default error message is rendered
     const errorMessage = screen.getByTestId('error-message');
-    expect(errorMessage).toHaveTextContent('Sorry, an unexpected error has occurred.');
+    expect(errorMessage).toHaveTextContent(
+      'Sorry, an unexpected error has occurred.'
+    );
   });
 });
