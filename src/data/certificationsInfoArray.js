@@ -33,6 +33,14 @@ const certificationsInfoArray = [
   },
   {
     certificate_ID: 5,
+    name: 'Relational Database',
+    provider: 'FreeCodeCamp',
+    imageUrl: 'https://projectimages.netlify.app/certificates/certificate_7.jpeg',
+    certificateUrl:
+      'https://www.freecodecamp.org/certification/sathish_kannan/relational-database-v8',
+  },
+  {
+    certificate_ID: 6,
     name: 'Back End Development and APIs',
     provider: 'FreeCodeCamp',
     imageUrl: 'https://projectimages.netlify.app/certificates/certificate_5.jpeg',
@@ -40,21 +48,13 @@ const certificationsInfoArray = [
       'https://www.freecodecamp.org/certification/sathish_kannan/back-end-development-and-apis',
   },
   {
-    certificate_ID: 6,
+    certificate_ID: 7,
     name: 'Quality Assurance',
     provider: 'FreeCodeCamp',
     imageUrl: 'https://projectimages.netlify.app/certificates/certificate_6.jpeg',
     certificateUrl:
       'https://www.freecodecamp.org/certification/sathish_kannan/quality-assurance-v7',
   },
-  {
-    certificate_ID: 7,
-    name: 'Relational Database',
-    provider: 'FreeCodeCamp',
-    imageUrl: 'https://projectimages.netlify.app/certificates/certificate_7.jpeg',
-    certificateUrl:
-      'https://www.freecodecamp.org/certification/sathish_kannan/relational-database-v8',
-  },
 ];
 
-export default certificationsInfoArray;
+export default certificationsInfoArray.reverse();
